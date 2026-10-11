@@ -24,3 +24,11 @@
 - CI run 38165043337: `check` job PASSED (npm ci, build, lint, 41 tests, internal links, lychee external links, Pages artifact). `deploy` job FAILED: "Failed to create deployment (status: 404) ... Ensure GitHub Pages has been enabled".
 - POST /repos/Ha2mad/pk-salary-tools/pages {build_type: workflow} → 403 "Resource not accessible by personal access token". Turning on Pages for the first time appears to need more than the Pages permission (likely Administration: write), or a manual change in the repo settings.
 - BLOCKED: the user needs to go to Settings → Pages → Source = "GitHub Actions", then re-run the workflow (or I re-run it).
+
+## 2026-10-11 23:52 PKT (Day 4–6: LIVE)
+- User set Pages Source = GitHub Actions. Pushed ee5db7e; CI run 38165378217 succeeded (check + deploy).
+- LIVE: https://ha2mad.github.io/pk-salary-tools/
+- Verified live: 8 pages + sitemap.xml (8 URLs) + robots.txt + 3 embed snippets + demo → HTTP 200; unknown path → 404.
+- Live embed snippets run in jsdom with sample inputs: tax (150k/mo → Rs 6,000 monthly tax), increment (100k +50% → 150k; reverse 144k net → 150k gross), zakat (500k cash, silver Rs 3,500/tola → Rs 12,500). All PASS.
+- Live page JS is byte-identical to the repo JS that the UI tests cover. No real-browser (visual) check yet.
+- Note: robots.txt at /pk-salary-tools/robots.txt isn't the domain-root robots file, so crawlers ignore it. Submit the sitemap through Search Console instead (needs the user's Google account).
