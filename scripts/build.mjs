@@ -1,4 +1,5 @@
 import { mkdirSync, writeFileSync, cpSync, rmSync } from "node:fs";
+import { buildEmbeds } from "./embed.mjs";
 import { pages } from "../src/pages.mjs";
 const SITE_URL = (process.env.SITE_URL || "https://ha2mad.github.io/pk-salary-tools/").replace(/\/?$/, "/");
 const out = "dist";
@@ -24,6 +25,7 @@ for (const p of pages) {
 <meta property="og:url" content="${url}">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="${root}assets/style.css">
+${p.script ? `<link rel="stylesheet" href="${root}assets/tools.css">` : ""}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -56,4 +58,5 @@ ${pages.map((p) => `  <url><loc>${SITE_URL}${p.path}</loc><lastmod>${today}</las
 `);
 writeFileSync(out + "/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 writeFileSync(out + "/404.html", `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found</title></head><body><main><h1>Page not found</h1><p><a href="${SITE_URL}">Go to the home page</a></p></main></body></html>\n`);
+buildEmbeds(out, SITE_URL);
 console.log("Built", pages.length, "pages for", SITE_URL);

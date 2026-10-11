@@ -7,11 +7,6 @@ nav ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:1rem}
 .brand{font-weight:700;font-size:1.2rem;text-decoration:none}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;padding:0;list-style:none}
 .cards li{border:1px solid var(--border);border-radius:8px;padding:1rem}
-form{display:grid;gap:.75rem;max-width:28rem}label{font-weight:600}
-input,select,button{font:inherit;padding:.6rem;border:1px solid #888;border-radius:6px}
-button{background:var(--accent);color:#fff;border:0;cursor:pointer}
-:focus-visible{outline:3px solid #f5a623;outline-offset:2px}
-.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.5rem}
-.summary div{border:1px solid var(--border);border-radius:6px;padding:.5rem}dt{color:var(--muted);font-size:.9rem}dd{margin:0;font-weight:700}
 table{border-collapse:collapse;width:100%;margin-top:1rem;display:block;overflow-x:auto}th,td{border:1px solid var(--border);padding:.4rem;text-align:left}
-.error{color:#b00020}.note{background:#fff8e1;border-left:4px solid #f5a623;padding:.75rem}
+.note{background:#fff8e1;border-left:4px solid #f5a623;padding:.75rem}
+:focus-visible{outline:3px solid #f5a623;outline-offset:2px}

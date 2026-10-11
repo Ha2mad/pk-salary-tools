@@ -1,0 +1,11 @@
+.pkst-form{display:grid;gap:.6rem;max-width:30rem;margin:1rem 0}
+.pkst-form label{font-weight:600}
+.pkst-form fieldset{display:grid;gap:.5rem;border:1px solid #ddd;border-radius:6px;padding:.75rem}
+.pkst-form input,.pkst-form select,.pkst-form button{font:inherit;padding:.6rem;border:1px solid #888;border-radius:6px;width:100%}
+.pkst-form button{background:#0b6b3a;color:#fff;border:0;cursor:pointer}
+.pkst-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));gap:.5rem;padding:0}
+.pkst-summary div{border:1px solid #ddd;border-radius:6px;padding:.5rem}
+.pkst-summary dt{color:#555;font-size:.9rem}.pkst-summary dd{margin:0;font-weight:700}
+.pkst-table{border-collapse:collapse;width:100%;display:block;overflow-x:auto}.pkst-table th,.pkst-table td{border:1px solid #ddd;padding:.4rem;text-align:left}
+.pkst-error{color:#b00020}
+.pkst-result:focus{outline:none}
