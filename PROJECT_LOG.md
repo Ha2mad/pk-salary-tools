@@ -51,3 +51,10 @@
 - Most likely cause: stale browser cache. The redesigned HTML loaded with the OLD cached style.css (same URL, cached up to 10 min). The old CSS has none of the new classes (.site-header, .menu-btn, .site-nav), which gives exactly the reported look: bare Menu button, visible nav, default links. Not reproducible headless (fresh cache). Not confirmed on the user's machine.
 - Fix: content-hash cache busting (?v=<sha256-10>) on all CSS/JS URLs, including module imports inside the JS; absolute base-path URLs (/pk-salary-tools/assets/...) built from SITE_URL.
 - New: scripts/check-deployed.mjs plus a CI `verify` job after deploy. Every sitemap page must be 200 and have a stylesheet; every CSS/JS (and the JS imports inside it) must be 200 with the correct content-type. Otherwise the run fails.
+- 2026-10-12 00:15 PKT: Blogger content pack: blogger/ (3 tool posts with embeds, 3 articles, 4 pages, PASTE_GUIDE.md) → blogger.zip. Embeds in posts tested in jsdom: PASS.
+
+## 2026-10-12 00:45 PKT: Blogger audit (https://pksalarytools.blogspot.com/)
+- Feeds: 7 posts, 0 pages. Calculator posts are titled with their labels ("salary-tax-calculator", "Salary Tax, Calculators, Salary Increment", "Zakat, Calculators"). About/Disclaimer/Privacy Policy were published as posts; Contact, article-2 and article-3 are missing.
+- All 3 calculators work live (headless Chrome via puppeteer-core with sample inputs: PASS, no JS errors). Screenshot: screens/blogger-tax-post-390.png
+- article-1 still has the SALARY-TAX-POST-URL placeholder. /p/about|contact|privacy-policy|disclaimer.html → 404.
+- Fixes need the user (no Blogger access from the box).
