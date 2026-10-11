@@ -9,6 +9,7 @@
     "lint": "eslint . && html-validate \"dist/**/*.html\"",
     "test": "node --test tests/",
     "check-links": "node scripts/check-links.mjs",
+    "check-deployed": "node scripts/check-deployed.mjs",
     "ci": "npm run build && npm run lint && npm test && npm run check-links"
   },
   "devDependencies": {

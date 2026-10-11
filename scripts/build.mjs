@@ -1,4 +1,5 @@
-import { mkdirSync, writeFileSync, cpSync, rmSync } from "node:fs";
+import { mkdirSync, writeFileSync, cpSync, rmSync, readFileSync, readdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { buildEmbeds } from "./embed.mjs";
 import { icons } from "../src/icons.mjs";
 import { pages } from "../src/pages.mjs";
@@ -7,6 +8,15 @@ const out = "dist";
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out + "/assets", { recursive: true });
 cpSync("site/assets", out + "/assets", { recursive: true });
+// Cache busting: version every asset by content hash; absolute base path so URLs never depend on relative resolution.
+const BASE = new URL(SITE_URL).pathname;
+const hash = (f) => createHash("sha256").update(readFileSync("site/assets/" + f)).digest("hex").slice(0, 10);
+const V = Object.fromEntries(readdirSync("site/assets").map((f) => [f, hash(f)]));
+for (const f of readdirSync(out + "/assets").filter((f) => f.endsWith(".js"))) {
+  const p = out + "/assets/" + f;
+  writeFileSync(p, readFileSync(p, "utf8").replace(/from "\.\/([\w.-]+\.js)"/g, (m, dep) => `from "./${dep}?v=${V[dep]}"`));
+}
+const asset = (f) => `${BASE}assets/${f}?v=${V[f]}`;
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 for (const p of pages) {
   const depth = p.path.split("/").filter(Boolean).length;
@@ -27,8 +37,8 @@ for (const p of pages) {
 <meta property="og:description" content="${esc(p.description)}">
 <meta property="og:url" content="${url}">
 <meta name="twitter:card" content="summary">
-<link rel="stylesheet" href="${root}assets/style.css">
-${p.script ? `<link rel="stylesheet" href="${root}assets/tools.css">` : ""}
+<link rel="stylesheet" href="${asset("style.css")}">
+${p.script ? `<link rel="stylesheet" href="${asset("tools.css")}">` : ""}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -52,8 +62,8 @@ ${p.home ? p.body.replaceAll("{{root}}", root) : `<div class="page"><div class="
 <li><a href="${root}privacy-policy/">Privacy Policy</a></li><li><a href="${root}disclaimer/">Disclaimer</a></li>
 </ul><p>© ${new Date().getFullYear()} Pakistan Salary Tools</p></nav>
 </div></footer>
-<script type="module" src="${root}assets/nav.js"></script>
-${p.script ? `<script type="module" src="${root}assets/${p.script}"></script>` : ""}
+<script type="module" src="${asset("nav.js")}"></script>
+${p.script ? `<script type="module" src="${asset(p.script)}"></script>` : ""}
 </body>
 </html>
 `;

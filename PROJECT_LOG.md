@@ -45,3 +45,9 @@
 - Calculators: panels, labelled inputs with Rs/%/tola prefixes, custom select, prominent gradient result card, 2-column stat grid on mobile, breakdown table with total row. Blogger embeds use the same scoped .pkst CSS.
 - Screenshots: /workspace/site-project/screens/ (before-*, after-*).
 - 41/41 tests, lint and link check pass.
+
+## 2026-10-12 ~00:10 PKT: "No CSS in real browser" investigation
+- Live HTML referenced ./assets/style.css; the URL resolved correctly; HTTP 200, text/css, no CSP, no integrity attribute, all-lowercase filenames, /pk-salary-tools → 301 to the slash URL. Asset served with cache-control: max-age=600.
+- Most likely cause: stale browser cache. The redesigned HTML loaded with the OLD cached style.css (same URL, cached up to 10 min). The old CSS has none of the new classes (.site-header, .menu-btn, .site-nav), which gives exactly the reported look: bare Menu button, visible nav, default links. Not reproducible headless (fresh cache). Not confirmed on the user's machine.
+- Fix: content-hash cache busting (?v=<sha256-10>) on all CSS/JS URLs, including module imports inside the JS; absolute base-path URLs (/pk-salary-tools/assets/...) built from SITE_URL.
+- New: scripts/check-deployed.mjs plus a CI `verify` job after deploy. Every sitemap page must be 200 and have a stylesheet; every CSS/JS (and the JS imports inside it) must be 200 with the correct content-type. Otherwise the run fails.

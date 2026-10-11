@@ -44,3 +44,16 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+  verify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://ha2mad.github.io/pk-salary-tools/' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Wait for Pages CDN
+        run: sleep 30
+      - name: Every referenced asset returns 200 with correct type
+        run: node scripts/check-deployed.mjs
