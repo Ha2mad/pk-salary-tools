@@ -18,3 +18,9 @@
 - Built: Blogger embeds. scripts/embed.mjs inlines tax/finance/ui JS and scoped CSS into one snippet per tool (dist/embed/*.snippet.html, plus demo pages). BLOGGER.md has the paste instructions.
 - Tests: 41/41 pass (tax 17, finance 16, embed 3, jsdom UI 5). ESLint + html-validate clean; 15 pages, 0 broken internal links.
 - Found: the 9% surcharge makes take-home pay drop just above Rs 10M (tax jumps ~Rs 241k). This is noted on the increment page.
+
+## 2026-10-11 23:45 PKT (Day 4, deploy attempt)
+- Push succeeded: main = affda77 at https://github.com/Ha2mad/pk-salary-tools
+- CI run 38165043337: `check` job PASSED (npm ci, build, lint, 41 tests, internal links, lychee external links, Pages artifact). `deploy` job FAILED: "Failed to create deployment (status: 404) ... Ensure GitHub Pages has been enabled".
+- POST /repos/Ha2mad/pk-salary-tools/pages {build_type: workflow} → 403 "Resource not accessible by personal access token". Turning on Pages for the first time appears to need more than the Pages permission (likely Administration: write), or a manual change in the repo settings.
+- BLOCKED: the user needs to go to Settings → Pages → Source = "GitHub Actions", then re-run the workflow (or I re-run it).
