@@ -37,3 +37,11 @@
 - Added .github/workflows/uptime.yml: every 6h, checks every sitemap URL plus robots, sitemap and embeds; on failure it fails the run and opens or comments on an "uptime" issue (GITHUB_TOKEN, issues: write).
 - Added .github/workflows/lighthouse.yml: weekly (Sun 07:41 PKT) plus manual; 4 URLs; results uploaded as artifacts; a11y < 0.9 = error, others warn.
 - Added ADSENSE_PLAN.md (Blogger setup, post templates, pages, Search Console, checklist, GDPR CMP, timeline; with VERIFIED/UNVERIFIED/ESTIMATE labels).
+- CI runs for cad5dc1 (38165492760) and 019fff2 (38165546443): success.
+- Couldn't start the uptime/Lighthouse workflows manually: POST .../dispatches → 403 "Resource not accessible by personal access token" (needs the Actions: write permission). They'll run on their schedules (uptime: next 6h slot; Lighthouse: Sunday).
+
+## 2026-10-12 ~00:20 PKT: Visual redesign (user feedback: "looks like 2010")
+- New design system: system font stack, type scale with clamp(), deep green + neutral palette, sticky blurred header with mobile menu button (aria-expanded, Esc closes), hero with CTA + trust row, tool cards with inline SVG icons + hover lift, feature section, dark green footer, styled tables, amber focus rings, prefers-reduced-motion.
+- Calculators: panels, labelled inputs with Rs/%/tola prefixes, custom select, prominent gradient result card, 2-column stat grid on mobile, breakdown table with total row. Blogger embeds use the same scoped .pkst CSS.
+- Screenshots: /workspace/site-project/screens/ (before-*, after-*).
+- 41/41 tests, lint and link check pass.

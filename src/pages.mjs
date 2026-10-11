@@ -1,33 +1,46 @@
+import { icons } from "./icons.mjs";
 const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-11";
 export const pages = [
-{ path: "", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
+{ path: "", home: true, title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
   description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2025-26, increment take-home and Zakat.",
-  body: `<h1>Free salary &amp; money calculators for Pakistan</h1>
-<p>Simple tools that run entirely in your browser. Nothing you type is sent anywhere. Every tax figure links to its official source and shows the full working.</p>
+  body: `<section class="hero"><div class="wrap">
+<span class="eyebrow">${icons.bolt} Updated for Tax Year 2026 (2025-26)</span>
+<h1>Know your real take-home pay in seconds</h1>
+<p class="lead">Free salary tax, raise and Zakat calculators for Pakistan, checked against the FBR's own figures. Every calculation runs in your browser, so nothing you type is sent anywhere.</p>
+<div class="cta-row"><a class="btn btn-primary" href="{{root}}tools/salary-tax-calculator/">Calculate my salary tax ${icons.arrow}</a><a class="btn btn-ghost" href="#tools">See all tools</a></div>
+<ul class="trust"><li>${icons.shield} Private: no data leaves your device</li><li>${icons.doc} Sources cited on every page</li><li>${icons.bolt} Free, no sign-up</li></ul>
+</div></section>
+<section class="section" id="tools"><div class="wrap">
+<div class="section-head"><h2>Calculators</h2><p class="lead">Three focused tools for the money questions salaried Pakistanis ask most.</p></div>
 <ul class="cards">
-<li><h2><a href="tools/salary-tax-calculator/">Salary Tax Calculator 2025-26</a></h2><p>Monthly and annual income tax, take-home pay, and a slab-by-slab breakdown using the FBR rates for Tax Year 2026.</p></li>
-<li><h2><a href="tools/salary-increment-calculator/">Salary Increment Calculator</a></h2><p>See how much of a raise you actually keep after tax, or find the gross salary you need for a target take-home pay.</p></li>
-<li><h2><a href="tools/zakat-calculator/">Zakat Calculator</a></h2><p>Work out Zakat on cash, gold, silver, investments and business stock, using today's metal prices.</p></li>
-</ul>
-<h2>Why use these tools?</h2>
-<p>Several popular Pakistani tax calculators still show the <em>previous</em> year's slab rates. We check our rates against the FBR's own circular and tax rate cards, and show the source on every page.</p>`},
-{ path: "tools/salary-tax-calculator/", title: "Salary Tax Calculator Pakistan 2025-26 (Tax Year 2026) – FBR Slabs",
+<li class="card"><span class="icon">${icons.calc}</span><h3><a href="{{root}}tools/salary-tax-calculator/">Salary Tax Calculator 2025-26</a></h3><p>Monthly and annual income tax, take-home pay and a slab-by-slab breakdown using the FBR rates for Tax Year 2026.</p><span class="more">Open calculator →</span></li>
+<li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}tools/salary-increment-calculator/">Salary Increment Calculator</a></h3><p>See how much of a raise you actually keep after tax, or find the gross salary you need for a target take-home pay.</p><span class="more">Open calculator →</span></li>
+<li class="card"><span class="icon">${icons.coins}</span><h3><a href="{{root}}tools/zakat-calculator/">Zakat Calculator</a></h3><p>Work out Zakat on cash, gold, silver, investments and business stock, using today's metal prices and the nisab you follow.</p><span class="more">Open calculator →</span></li>
+</ul></div></section>
+<section class="section" style="padding-top:0"><div class="wrap">
+<div class="section-head"><h2>Why trust these numbers?</h2></div>
+<div class="features">
+<div class="feature"><span class="icon">${icons.doc}</span><h3>Current, sourced rates</h3><p>Several popular calculators still use last year's slabs. Ours are checked against FBR Circular 01 of 2025-26 and the ICMA rate card, with links.</p></div>
+<div class="feature"><span class="icon">${icons.calc}</span><h3>Shows its working</h3><p>See exactly which slab you're in and how each rupee of tax is worked out, with no black box.</p></div>
+<div class="feature"><span class="icon">${icons.shield}</span><h3>Open and tested</h3><p>The calculation code is <a href="https://github.com/Ha2mad/pk-salary-tools" rel="noopener">open source</a> and checked by automated tests on every change.</p></div>
+</div></div></section>`},
+{ path: "tools/salary-tax-calculator/", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2025-26 (Tax Year 2026) – FBR Slabs",
   description: "Calculate income tax on your salary in Pakistan for 2025-26 using FBR slab rates. Monthly deduction, take-home pay and slab-by-slab working.",
   script: "page-tax.js",
   body: `<h1>Salary Tax Calculator Pakistan 2025-26</h1>
-<p>Enter your gross taxable salary to estimate income tax under the salaried-person rates for Tax Year 2026 (1 July 2025 – 30 June 2026).</p>
+<p class="lead">Enter your gross taxable salary to estimate income tax under the salaried-person rates for Tax Year 2026 (1 July 2025 – 30 June 2026).</p>
 <div id="tool"></div>
 <noscript><p>This calculator needs JavaScript.</p></noscript>
 <h2>Salaried tax slabs for 2025-26</h2>
-<table><thead><tr><th scope="col">Annual taxable income</th><th scope="col">Tax</th></tr></thead><tbody>
+<div class="table-scroll"><table><thead><tr><th scope="col">Annual taxable income</th><th scope="col">Tax</th></tr></thead><tbody>
 <tr><td>Up to Rs 600,000</td><td>0%</td></tr>
 <tr><td>Rs 600,001 – 1,200,000</td><td>1% of the amount above Rs 600,000</td></tr>
 <tr><td>Rs 1,200,001 – 2,200,000</td><td>Rs 6,000 + 11% of the amount above Rs 1,200,000</td></tr>
 <tr><td>Rs 2,200,001 – 3,200,000</td><td>Rs 116,000 + 23% of the amount above Rs 2,200,000</td></tr>
 <tr><td>Rs 3,200,001 – 4,100,000</td><td>Rs 346,000 + 30% of the amount above Rs 3,200,000</td></tr>
 <tr><td>Above Rs 4,100,000</td><td>Rs 616,000 + 35% of the amount above Rs 4,100,000</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p>A 9% surcharge applies to the tax when taxable income is above Rs 10 million (Section 4AB, as amended by Finance Act 2025).</p>
 <h2>Sources</h2>
 <ul>
@@ -39,7 +52,7 @@ export const pages = [
 <p>Pakistan taxes salary progressively. Your income is placed in a slab: you pay that slab's fixed amount plus its percentage on the part of your income above the slab's lower limit. For example, an annual salary of Rs 1,800,000 is in the third slab: Rs 6,000 + 11% × Rs 600,000 = Rs 72,000 a year (Rs 6,000 a month).</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/salary-increment-calculator/", title: "Salary Increment Calculator Pakistan 2025-26 – Take-home After Tax",
+{ path: "tools/salary-increment-calculator/", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2025-26 – Take-home After Tax",
   description: "See how much of a salary raise you keep after Pakistani income tax, or find the gross salary needed for a target take-home pay.",
   script: "page-increment.js",
   body: `<h1>Salary Increment Calculator (Tax Year 2026)</h1>
@@ -51,7 +64,7 @@ export const pages = [
 <p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. (Above Rs 10 million, the 9% surcharge applies to all of your tax, which makes a small jump at that point.)</p>
 <p class="note">This is an estimate, not tax advice. See the <a href="../salary-tax-calculator/">slab table and sources</a> and our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/zakat-calculator/", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
+{ path: "tools/zakat-calculator/", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
   description: "Free Zakat calculator for Pakistan. Enter today's gold or silver price per tola and your assets to work out Zakat at 2.5%.",
   script: "page-zakat.js",
   body: `<h1>Zakat Calculator</h1>
