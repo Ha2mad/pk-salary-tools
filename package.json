@@ -1,0 +1,20 @@
+{
+  "name": "pk-salary-tools",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "lint": "eslint . && html-validate \"dist/**/*.html\"",
+    "test": "node --test tests/",
+    "check-links": "node scripts/check-links.mjs",
+    "ci": "npm run build && npm run lint && npm test && npm run check-links"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "html-validate": "^9.0.0"
+  }
+}
