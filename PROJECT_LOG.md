@@ -1,3 +1,15 @@
+# Project Log
+
+## 2026-10-11 (Day 1)
+- Done: niche research, picked "Pakistan salary & personal-finance calculators", picked 3 tools (see research.md).
+- Found: competitor calculators disagree on the 2025-26 slab figures (quality gap).
+- Blockers: AdSense needs a domain I own (cost vs Rs 0 budget); GitHub Pages commercial-use gray area. Decision: the user chose Blogger for AdSense.
+
+## 2026-10-11 (Day 2)
+- Checked the slabs against FBR Circular 01/2025-26 (345k/615k vs 346k/616k discrepancy, see research.md).
+- Built the static site: 8 pages, 404, sitemap.xml, robots.txt, canonical/OG meta, accessibility basics.
+- Salary tax calculator finished, with 17 unit tests. CI/deploy workflow written (.github/workflows/ci.yml).
+- Blocked at the time: no GitHub push tooling; the user then created the repo and a token.
 
 ## 2026-10-11 (Days 3–4)
 - Commit author changed to Ha2mad <119964650+Ha2mad@users.noreply.github.com> (amended, never pushed). Remote origin = https://github.com/Ha2mad/pk-salary-tools.git (no credentials stored).
