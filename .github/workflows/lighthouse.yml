@@ -1,0 +1,22 @@
+name: Lighthouse
+on:
+  schedule:
+    - cron: "41 2 * * 0"   # Sundays 07:41 PKT
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://ha2mad.github.io/pk-salary-tools/
+            https://ha2mad.github.io/pk-salary-tools/tools/salary-tax-calculator/
+            https://ha2mad.github.io/pk-salary-tools/tools/salary-increment-calculator/
+            https://ha2mad.github.io/pk-salary-tools/tools/zakat-calculator/
+          runs: 1
+          uploadArtifacts: true
+          configPath: ./lighthouserc.json

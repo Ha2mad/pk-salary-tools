@@ -32,3 +32,8 @@
 - Live embed snippets run in jsdom with sample inputs: tax (150k/mo → Rs 6,000 monthly tax), increment (100k +50% → 150k; reverse 144k net → 150k gross), zakat (500k cash, silver Rs 3,500/tola → Rs 12,500). All PASS.
 - Live page JS is byte-identical to the repo JS that the UI tests cover. No real-browser (visual) check yet.
 - Note: robots.txt at /pk-salary-tools/robots.txt isn't the domain-root robots file, so crawlers ignore it. Submit the sitemap through Search Console instead (needs the user's Google account).
+
+## 2026-10-11 ~23:55 PKT (Day 7: monitoring + AdSense plan)
+- Added .github/workflows/uptime.yml: every 6h, checks every sitemap URL plus robots, sitemap and embeds; on failure it fails the run and opens or comments on an "uptime" issue (GITHUB_TOKEN, issues: write).
+- Added .github/workflows/lighthouse.yml: weekly (Sun 07:41 PKT) plus manual; 4 URLs; results uploaded as artifacts; a11y < 0.9 = error, others warn.
+- Added ADSENSE_PLAN.md (Blogger setup, post templates, pages, Search Console, checklist, GDPR CMP, timeline; with VERIFIED/UNVERIFIED/ESTIMATE labels).
