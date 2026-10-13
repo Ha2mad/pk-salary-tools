@@ -1,11 +1,11 @@
 import { icons } from "./icons.mjs";
 const REPO = "https://github.com/Ha2mad/pk-salary-tools";
-const UPDATED = "2026-10-11";
+const UPDATED = "2026-10-13";
 export const pages = [
 { path: "", home: true, title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
-  description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2025-26, increment take-home and Zakat.",
+  description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2026-27, increment take-home and Zakat.",
   body: `<section class="hero"><div class="wrap">
-<span class="eyebrow">${icons.bolt} Updated for Tax Year 2026 (2025-26)</span>
+<span class="eyebrow">${icons.bolt} Updated for Tax Year 2027 (2026-27)</span>
 <h1>Know your real take-home pay in seconds</h1>
 <p class="lead">Free salary tax, raise and Zakat calculators for Pakistan, checked against the FBR's own figures. Every calculation runs in your browser, so nothing you type is sent anywhere.</p>
 <div class="cta-row"><a class="btn btn-primary" href="{{root}}tools/salary-tax-calculator/">Calculate my salary tax ${icons.arrow}</a><a class="btn btn-ghost" href="#tools">See all tools</a></div>
@@ -14,54 +14,70 @@ export const pages = [
 <section class="section" id="tools"><div class="wrap">
 <div class="section-head"><h2>Calculators</h2><p class="lead">Three focused tools for the money questions salaried Pakistanis ask most.</p></div>
 <ul class="cards">
-<li class="card"><span class="icon">${icons.calc}</span><h3><a href="{{root}}tools/salary-tax-calculator/">Salary Tax Calculator 2025-26</a></h3><p>Monthly and annual income tax, take-home pay and a slab-by-slab breakdown using the FBR rates for Tax Year 2026.</p><span class="more">Open calculator →</span></li>
+<li class="card"><span class="icon">${icons.calc}</span><h3><a href="{{root}}tools/salary-tax-calculator/">Salary Tax Calculator 2026-27</a></h3><p>Monthly and annual income tax, take-home pay and a slab-by-slab breakdown using the FBR rates for Tax Year 2027.</p><span class="more">Open calculator →</span></li>
 <li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}tools/salary-increment-calculator/">Salary Increment Calculator</a></h3><p>See how much of a raise you actually keep after tax, or find the gross salary you need for a target take-home pay.</p><span class="more">Open calculator →</span></li>
 <li class="card"><span class="icon">${icons.coins}</span><h3><a href="{{root}}tools/zakat-calculator/">Zakat Calculator</a></h3><p>Work out Zakat on cash, gold, silver, investments and business stock, using today's metal prices and the nisab you follow.</p><span class="more">Open calculator →</span></li>
 </ul></div></section>
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="section-head"><h2>Why trust these numbers?</h2></div>
 <div class="features">
-<div class="feature"><span class="icon">${icons.doc}</span><h3>Current, sourced rates</h3><p>Several popular calculators still use last year's slabs. Ours are checked against FBR Circular 01 of 2025-26 and the ICMA rate card, with links.</p></div>
+<div class="feature"><span class="icon">${icons.doc}</span><h3>Current, sourced rates</h3><p>Rates follow Finance Act 2026: FBR Circular 02 of 2026-27 and the Tax Year 2027 withholding rate card, with links on the calculator page.</p></div>
 <div class="feature"><span class="icon">${icons.calc}</span><h3>Shows its working</h3><p>See exactly which slab you're in and how each rupee of tax is worked out, with no black box.</p></div>
 <div class="feature"><span class="icon">${icons.shield}</span><h3>Open and tested</h3><p>The calculation code is <a href="https://github.com/Ha2mad/pk-salary-tools" rel="noopener">open source</a> and checked by automated tests on every change.</p></div>
 </div></div></section>`},
-{ path: "tools/salary-tax-calculator/", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2025-26 (Tax Year 2026) – FBR Slabs",
-  description: "Calculate income tax on your salary in Pakistan for 2025-26 using FBR slab rates. Monthly deduction, take-home pay and slab-by-slab working.",
+{ path: "tools/salary-tax-calculator/", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2026-27 (Tax Year 2027) – FBR Slabs",
+  description: "Calculate income tax on your salary in Pakistan for 2026-27 using FBR slab rates. Monthly deduction, take-home pay and slab-by-slab working.",
   script: "page-tax.js",
-  body: `<h1>Salary Tax Calculator Pakistan 2025-26</h1>
-<p class="lead">Enter your gross taxable salary to estimate income tax under the salaried-person rates for Tax Year 2026 (1 July 2025 – 30 June 2026).</p>
+  body: `<h1>Salary Tax Calculator Pakistan 2026-27</h1>
+<p class="lead">Enter your gross taxable salary to estimate income tax under the salaried-person rates for Tax Year 2027 (1 July 2026 – 30 June 2027), as set by the Finance Act 2026.</p>
 <div id="tool"></div>
 <noscript><p>This calculator needs JavaScript.</p></noscript>
-<h2>Salaried tax slabs for 2025-26</h2>
+<h2>Salaried tax slabs for 2026-27</h2>
 <div class="table-scroll"><table><thead><tr><th scope="col">Annual taxable income</th><th scope="col">Tax</th></tr></thead><tbody>
 <tr><td>Up to Rs 600,000</td><td>0%</td></tr>
 <tr><td>Rs 600,001 – 1,200,000</td><td>1% of the amount above Rs 600,000</td></tr>
 <tr><td>Rs 1,200,001 – 2,200,000</td><td>Rs 6,000 + 11% of the amount above Rs 1,200,000</td></tr>
-<tr><td>Rs 2,200,001 – 3,200,000</td><td>Rs 116,000 + 23% of the amount above Rs 2,200,000</td></tr>
-<tr><td>Rs 3,200,001 – 4,100,000</td><td>Rs 346,000 + 30% of the amount above Rs 3,200,000</td></tr>
-<tr><td>Above Rs 4,100,000</td><td>Rs 616,000 + 35% of the amount above Rs 4,100,000</td></tr>
+<tr><td>Rs 2,200,001 – 3,200,000</td><td>Rs 116,000 + 20% of the amount above Rs 2,200,000</td></tr>
+<tr><td>Rs 3,200,001 – 4,100,000</td><td>Rs 316,000 + 25% of the amount above Rs 3,200,000</td></tr>
+<tr><td>Rs 4,100,001 – 5,600,000</td><td>Rs 541,000 + 29% of the amount above Rs 4,100,000</td></tr>
+<tr><td>Rs 5,600,001 – 7,000,000</td><td>Rs 976,000 + 32% of the amount above Rs 5,600,000</td></tr>
+<tr><td>Above Rs 7,000,000</td><td>Rs 1,424,000 + 35% of the amount above Rs 7,000,000</td></tr>
 </tbody></table></div>
-<p>A 9% surcharge applies to the tax when taxable income is above Rs 10 million (Section 4AB, as amended by Finance Act 2025).</p>
+<p>No surcharge applies to salary in Tax Year 2027. The Finance Act 2026 amended section 4AB so that, where income is chargeable under the head Salary, no surcharge is payable. In Tax Year 2026 a 9% surcharge was added to the whole salary-tax bill once taxable income exceeded Rs 10 million. A 10% surcharge still applies to non-salary income of individuals and associations of persons above that threshold. This calculator covers salary only.</p>
 <h2>Sources</h2>
 <ul>
-<li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (explains the Finance Act 2025 changes)</li>
-<li><a href="https://www.icmainternational.com/News_Pdf/Tax_Rate_Card_for_Tax_Year_2025_26.pdf" rel="noopener">ICMA Pakistan Tax Rate Card, Tax Year 2025-26</a></li>
+<li><a href="https://senate.gov.pk/uploads/documents/1782733238_492.pdf" rel="noopener">Finance Act, 2026</a> (Gazette of Pakistan, Extraordinary, Part I, 26 June 2026): substitutes the table in clause (2) of Division I of Part I of the First Schedule, and replaces the salaried limb of section 4AB with "no surcharge shall be payable"</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026; explains the rate relief and the withdrawal of the 9% salaried surcharge)</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf" rel="noopener">FBR Withholding Tax Rate Card for Tax Year 2027</a> (updated to 30 June 2026; section 149 salary rates). Index: <a href="https://fbr.gov.pk/withholding-taxes-rate-card/174298/174301" rel="noopener">FBR withholding rate cards</a></li>
 </ul>
-<p class="note">Note: the FBR circular prints the fixed amounts for the top two slabs as Rs 345,000 and Rs 615,000. Those numbers don't follow from the slabs below them (116,000 + 23% × 1,000,000 = 346,000). We use Rs 346,000 and Rs 616,000, which keep the slabs continuous and match the ICMA rate card. The difference is Rs 1,000 a year at most.</p>
+<p class="note">The fixed amounts follow from the band below them: 1% of Rs 600,000 is Rs 6,000; Rs 6,000 + 11% of Rs 1,000,000 is Rs 116,000; Rs 116,000 + 20% of Rs 1,000,000 is Rs 316,000; Rs 316,000 + 25% of Rs 900,000 is Rs 541,000; Rs 541,000 + 29% of Rs 1,500,000 is Rs 976,000; Rs 976,000 + 32% of Rs 1,400,000 is Rs 1,424,000. The Gazette, the circular and the withholding card all use these figures.</p>
+<h2>What changed from Tax Year 2026 (2025-26)</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Annual taxable income</th><th scope="col">Tax Year 2026</th><th scope="col">Tax Year 2027</th></tr></thead><tbody>
+<tr><td>Up to Rs 600,000</td><td>0%</td><td>0%</td></tr>
+<tr><td>Rs 600,001 – 1,200,000</td><td>1% above Rs 600,000</td><td>1% above Rs 600,000</td></tr>
+<tr><td>Rs 1,200,001 – 2,200,000</td><td>Rs 6,000 + 11%</td><td>Rs 6,000 + 11%</td></tr>
+<tr><td>Rs 2,200,001 – 3,200,000</td><td>Rs 116,000 + 23%</td><td>Rs 116,000 + 20%</td></tr>
+<tr><td>Rs 3,200,001 – 4,100,000</td><td>Rs 346,000 + 30%</td><td>Rs 316,000 + 25%</td></tr>
+<tr><td>Rs 4,100,001 – 5,600,000</td><td>Rs 616,000 + 35% (one band from Rs 4,100,001 up)</td><td>Rs 541,000 + 29%</td></tr>
+<tr><td>Rs 5,600,001 – 7,000,000</td><td>Rs 616,000 + 35%</td><td>Rs 976,000 + 32%</td></tr>
+<tr><td>Above Rs 7,000,000</td><td>Rs 616,000 + 35%, plus 9% surcharge above Rs 10 million</td><td>Rs 1,424,000 + 35%, no salaried surcharge</td></tr>
+</tbody></table></div>
+<p>An annual salary of Rs 2,400,000 is taxed at Rs 156,000 in Tax Year 2027 (Rs 116,000 + 20% × Rs 200,000). In Tax Year 2026 the same salary was Rs 162,000 (Rs 116,000 + 23% × Rs 200,000).</p>
+<p class="note">Tax Year 2026 comparison figures use fixed amounts of Rs 346,000 and Rs 616,000. FBR Circular 01 of 2025-26 prints Rs 345,000 and Rs 615,000 for those two slabs. Those printed numbers don't follow from the band below (116,000 + 23% × 1,000,000 = 346,000). Rs 346,000 and Rs 616,000 keep that year's slabs continuous and match the <a href="https://www.icmainternational.com/News_Pdf/Tax_Rate_Card_for_Tax_Year_2025_26.pdf" rel="noopener">ICMA rate card for 2025-26</a>. The difference is Rs 1,000 a year at most. See <a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Circular No. 01 of 2025-26</a>.</p>
 <h2>How the calculation works</h2>
-<p>Pakistan taxes salary progressively. Your income is placed in a slab: you pay that slab's fixed amount plus its percentage on the part of your income above the slab's lower limit. For example, an annual salary of Rs 1,800,000 is in the third slab: Rs 6,000 + 11% × Rs 600,000 = Rs 72,000 a year (Rs 6,000 a month).</p>
+<p>Pakistan taxes salary progressively. Your income is placed in a slab: you pay that slab's fixed amount plus its percentage on the part of your income above the slab's lower limit. For example, an annual salary of Rs 1,800,000 is in the third slab: Rs 6,000 + 11% × Rs 600,000 = Rs 72,000 a year (Rs 6,000 a month). A salary of Rs 2,400,000 is in the fourth slab: Rs 116,000 + 20% × Rs 200,000 = Rs 156,000 a year (Rs 13,000 a month).</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/salary-increment-calculator/", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2025-26 – Take-home After Tax",
-  description: "See how much of a salary raise you keep after Pakistani income tax, or find the gross salary needed for a target take-home pay.",
+{ path: "tools/salary-increment-calculator/", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
+  description: "See how much of a salary raise you keep after Pakistani income tax for 2026-27, or find the gross salary needed for a target take-home pay.",
   script: "page-increment.js",
-  body: `<h1>Salary Increment Calculator (Tax Year 2026)</h1>
-<p>A 20% raise doesn't mean 20% more take-home pay. Because Pakistan's salary tax is progressive, part of every increment goes to tax. Some raises also push part of your income into a higher slab. This calculator shows the real effect, using the FBR salaried rates for 2025-26.</p>
+  body: `<h1>Salary Increment Calculator (Tax Year 2027)</h1>
+<p>A 20% raise doesn't mean 20% more take-home pay. Because Pakistan's salary tax is progressive, part of every increment goes to tax. Some raises also push part of your income into a higher slab. This calculator shows the real effect, using the FBR salaried rates for 2026-27.</p>
 <div id="tool"></div><noscript><p>This calculator needs JavaScript.</p></noscript>
 <h2>How it works</h2>
 <p>We work out the annual tax on your current salary and on your new salary, then compare take-home pay. The "share you keep" is extra take-home divided by extra gross pay. The reverse calculator searches for the lowest gross salary whose take-home after tax reaches your target.</p>
 <h2>Will a raise ever lower my take-home?</h2>
-<p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. (Above Rs 10 million, the 9% surcharge applies to all of your tax, which makes a small jump at that point.)</p>
+<p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. In Tax Year 2026 a 9% surcharge applied to the whole tax bill once taxable income exceeded Rs 10 million, and take-home could dip just above that line. The Finance Act 2026 withdrew that surcharge for salary, so there is no such dip in 2026-27.</p>
 <p class="note">This is an estimate, not tax advice. See the <a href="../salary-tax-calculator/">slab table and sources</a> and our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
 { path: "tools/zakat-calculator/", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",

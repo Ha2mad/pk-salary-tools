@@ -1,4 +1,4 @@
-import { computeTax, breakdown, formatPKR } from "./tax.js";
+import { computeTax, breakdown, formatPKR, TAX_YEARS, CURRENT_TAX_YEAR } from "./tax.js";
 import { incrementImpact, grossForNet, computeZakat, TOLA_GRAMS } from "./finance.js";
 
 const pct = (x) => (x * 100).toFixed(2) + "%";
@@ -23,16 +23,17 @@ export function mountTax(root) {
     const raw = val(f, p + "amount"), amount = Number(raw);
     if (raw === "" || !Number.isFinite(amount) || amount < 0) return err(out, "Please enter a valid salary (0 or more).");
     const annual = val(f, p + "period") === "monthly" ? amount * 12 : amount;
-    const r = computeTax(annual);
-    const rows = breakdown(annual).map((b) => `<tr><td>${formatPKR(b.from)} – ${b.to === Infinity ? "above" : formatPKR(b.to)}</td><td>${(b.rate * 100).toFixed(0)}%</td><td>${formatPKR(b.taxable)}</td><td>${formatPKR(b.tax)}</td></tr>`).join("");
-    out.innerHTML = `${hero("Monthly take-home", formatPKR(r.monthlyTakeHome), `after ${formatPKR(r.monthlyTax)} monthly tax · Tax Year 2026`)}<dl class="pkst-summary">
+    const r = computeTax(annual, CURRENT_TAX_YEAR);
+    const yearLabel = TAX_YEARS[CURRENT_TAX_YEAR].shortLabel;
+    const rows = breakdown(annual, CURRENT_TAX_YEAR).map((b) => `<tr><td>${formatPKR(b.from)} – ${b.to === Infinity ? "above" : formatPKR(b.to)}</td><td>${(b.rate * 100).toFixed(0)}%</td><td>${formatPKR(b.taxable)}</td><td>${formatPKR(b.tax)}</td></tr>`).join("");
+    out.innerHTML = `${hero("Monthly take-home", formatPKR(r.monthlyTakeHome), `after ${formatPKR(r.monthlyTax)} monthly tax · ${yearLabel}`)}<dl class="pkst-summary">
     <div><dt>Annual taxable salary</dt><dd>${formatPKR(annual)}</dd></div>
     <div><dt>Annual income tax</dt><dd>${formatPKR(r.annualTax)}</dd></div>
     <div><dt>Monthly tax deduction</dt><dd>${formatPKR(r.monthlyTax)}</dd></div>
     <div><dt>Monthly take-home</dt><dd>${formatPKR(r.monthlyTakeHome)}</dd></div>
     <div><dt>Effective rate</dt><dd>${pct(r.effectiveRate)}</dd></div>
     <div><dt>Marginal rate</dt><dd>${pct(r.marginalRate)}</dd></div></dl>
-    ${r.surcharge ? `<p class="pkst-msg">Includes 9% surcharge of ${formatPKR(r.surcharge)} (taxable income above Rs 10 million).</p>` : ""}
+    ${r.surcharge ? `<p class="pkst-msg">Includes ${(TAX_YEARS[r.year].surchargeRate * 100).toFixed(0)}% surcharge of ${formatPKR(r.surcharge)} (taxable income above Rs 10 million).</p>` : ""}
     <div class="pkst-table-wrap"><table class="pkst-table"><caption>Slab-by-slab breakdown (annual)</caption><thead><tr><th scope="col">Band</th><th scope="col">Rate</th><th scope="col">Income in band</th><th scope="col">Tax</th></tr></thead><tbody>${rows}</tbody><tfoot><tr><td colspan="3">Total annual tax${r.surcharge ? " (incl. surcharge)" : ""}</td><td>${formatPKR(r.annualTax)}</td></tr></tfoot></table></div>`;
     out.focus();
   });

@@ -11,6 +11,15 @@ test("tax UI shows monthly tax for 150,000/month", () => {
   const el = document.createElement("div"); document.body.append(el); mountTax(el);
   setv(el, "amount", 150000); submit(el.querySelector("form"));
   assert.match(el.textContent, /Monthly tax deduction\s*Rs 6,000/);
+  assert.match(el.textContent, /Tax Year 2027/);
+  assert.doesNotMatch(el.textContent, /surcharge/);
+});
+test("tax UI shows Rs 264,500 monthly tax on Rs 1,000,000 with no surcharge", () => {
+  const el = document.createElement("div"); document.body.append(el); mountTax(el);
+  setv(el, "amount", 1000000); submit(el.querySelector("form"));
+  assert.match(el.textContent, /Monthly tax deduction\s*Rs 264,500/);
+  assert.match(el.textContent, /Annual income tax\s*Rs 3,174,000/);
+  assert.doesNotMatch(el.textContent, /surcharge/);
 });
 test("tax UI shows error on empty input", () => {
   const el = document.createElement("div"); document.body.append(el); mountTax(el);
