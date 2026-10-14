@@ -30,6 +30,19 @@ test("grossForNet finds minimal gross", () => {
   }
 });
 test("grossForNet: 1,728,000 net needs 1,800,000 gross", () => assert.equal(grossForNet(1728000), 1800000));
+test("grossForNet: 2,244,000 net needs 2,400,000 gross under the 20% band", () => assert.equal(grossForNet(2244000), 2400000));
+test("raise on a Rs 200,000 salary uses Tax Year 2027 tax of Rs 156,000", () => {
+  const r = incrementImpact(200000, 0);
+  assert.equal(r.before.annualTax, 156000);
+  assert.equal(r.before.surcharge, 0);
+});
+test("crossing Rs 10 million no longer cuts take-home", () => {
+  const r = incrementImpact(800000, 25);
+  assert.equal(r.newMonthly, 1000000);
+  assert.equal(r.after.annualTax, 3174000);
+  assert.equal(r.after.surcharge, 0);
+  assert.ok(r.monthlyNetGain > 0);
+});
 test("grossForNet rejects negative", () => assert.throws(() => grossForNet(-5)));
 
 test("zakat due above silver nisab", () => {

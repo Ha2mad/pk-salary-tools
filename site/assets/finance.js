@@ -1,7 +1,7 @@
-import { computeTax } from "./tax.js";
+import { computeTax, CURRENT_TAX_YEAR } from "./tax.js";
 
 // Salary increment: compare take-home before and after a raise.
-export function incrementImpact(currentMonthly, raisePercent, year = "2026") {
+export function incrementImpact(currentMonthly, raisePercent, year = CURRENT_TAX_YEAR) {
   const cur = Number(currentMonthly), pct = Number(raisePercent);
   if (!Number.isFinite(cur) || cur < 0) throw new Error("Salary must be a non-negative number");
   if (!Number.isFinite(pct) || pct < -100) throw new Error("Raise percent must be a number >= -100");
@@ -19,7 +19,7 @@ export function incrementImpact(currentMonthly, raisePercent, year = "2026") {
 }
 
 // Reverse: smallest annual gross whose take-home >= target annual net.
-export function grossForNet(targetAnnualNet, year = "2026") {
+export function grossForNet(targetAnnualNet, year = CURRENT_TAX_YEAR) {
   const t = Number(targetAnnualNet);
   if (!Number.isFinite(t) || t < 0) throw new Error("Target must be a non-negative number");
   const net = (g) => g - computeTax(g, year).annualTax;
