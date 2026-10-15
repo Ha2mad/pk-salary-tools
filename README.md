@@ -1,5 +1,11 @@
 # Pakistan Salary Tools
 
+Live site: https://ha2mad.github.io/pk-salary-tools/
+
+- [Salary tax calculator](https://ha2mad.github.io/pk-salary-tools/tools/salary-tax-calculator/)
+- [Salary increment calculator](https://ha2mad.github.io/pk-salary-tools/tools/salary-increment-calculator/)
+- [Zakat calculator](https://ha2mad.github.io/pk-salary-tools/tools/zakat-calculator/)
+
 Free, client-side calculators for salaried people in Pakistan. It's a static site with no backend, no paid APIs, and no tracking.
 
 - `site/assets/`: CSS and JS (the tax logic is in `tax.js`)
