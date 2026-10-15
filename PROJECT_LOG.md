@@ -58,3 +58,12 @@
 - All 3 calculators work live (headless Chrome via puppeteer-core with sample inputs: PASS, no JS errors). Screenshot: screens/blogger-tax-post-390.png
 - article-1 still has the SALARY-TAX-POST-URL placeholder. /p/about|contact|privacy-policy|disclaimer.html → 404.
 - Fixes need the user (no Blogger access from the box).
+
+## 2026-10-15 10:35 PKT: Routine run (content + health check)
+- Synced with remote main first (PR #2 had moved the calculator to Tax Year 2027 rates); rebased the unpushed Blogger-audit log commit on top.
+- Re-checked Tax Year 2027 salaried slabs and the withdrawn 9% salaried surcharge against FBR Circular 02 of 2026-27 (paras 7 and 8) and the FBR WHT Rate Card 2027 (s.149): match tax.js.
+- New guide: /guides/income-tax-on-monthly-salary-2026-27/ ("Income Tax on Monthly Salary in Pakistan 2026-27: Table from Rs 50,000 to Rs 1,000,000"). Monthly tax and take-home for 12 salary levels, 2025-26 comparison, worked example (Rs 300,000/month gives Rs 416,000/yr), sources, disclaimer. Linked from the home page (new Guides section) and the tax calculator page. Topic not covered by earlier Blogger articles (slabs explainer, nisab, salary slip).
+- tests/articles.test.mjs recomputes every table cell from tax.js. 73/73 tests, lint, link check pass. Pushed 06bf1f5; CI run 38687185286 succeeded (check, deploy, verify).
+- Health: all 9 sitemap URLs, sitemap.xml, robots.txt and the embed snippet return 200 on GitHub Pages; the guide is live. Blogger home, sitemap.xml, robots.txt and the feed return 200 (7 posts, 0 pages).
+- PROBLEM: the live Blogger tax calculator post still runs Tax Year 2026 rates (23% slab, "2025-26" labels). It needs re-pasting from the current dist/embed/*.snippet.html. The 2025-26 slabs article is also outdated.
+- PROBLEM: the Blogger email couldn't be sent from this routine run (no send tool for the bot inbox here). Body saved at ../blogger/posts/2026-10-15-income-tax-on-monthly-salary-2026-27.html; handed to the main assistant to send.
