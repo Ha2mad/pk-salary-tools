@@ -1,4 +1,5 @@
 import { icons } from "./icons.mjs";
+import { articles } from "./articles.mjs";
 const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-13";
 export const pages = [
@@ -17,6 +18,11 @@ export const pages = [
 <li class="card"><span class="icon">${icons.calc}</span><h3><a href="{{root}}tools/salary-tax-calculator/">Salary Tax Calculator 2026-27</a></h3><p>Monthly and annual income tax, take-home pay and a slab-by-slab breakdown using the FBR rates for Tax Year 2027.</p><span class="more">Open calculator →</span></li>
 <li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}tools/salary-increment-calculator/">Salary Increment Calculator</a></h3><p>See how much of a raise you actually keep after tax, or find the gross salary you need for a target take-home pay.</p><span class="more">Open calculator →</span></li>
 <li class="card"><span class="icon">${icons.coins}</span><h3><a href="{{root}}tools/zakat-calculator/">Zakat Calculator</a></h3><p>Work out Zakat on cash, gold, silver, investments and business stock, using today's metal prices and the nisab you follow.</p><span class="more">Open calculator →</span></li>
+</ul></div></section>
+<section class="section" style="padding-top:0"><div class="wrap">
+<div class="section-head"><h2>Guides</h2></div>
+<ul class="cards">
+<li class="card"><span class="icon">${icons.doc}</span><h3><a href="{{root}}guides/income-tax-on-monthly-salary-2026-27/">Income tax on monthly salary 2026-27</a></h3><p>A ready table of monthly tax and take-home pay from Rs 50,000 to Rs 1,000,000, with last year's figures for comparison.</p><span class="more">Read the guide →</span></li>
 </ul></div></section>
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="section-head"><h2>Why trust these numbers?</h2></div>
@@ -66,6 +72,7 @@ export const pages = [
 <p class="note">Tax Year 2026 comparison figures use fixed amounts of Rs 346,000 and Rs 616,000. FBR Circular 01 of 2025-26 prints Rs 345,000 and Rs 615,000 for those two slabs. Those printed numbers don't follow from the band below (116,000 + 23% × 1,000,000 = 346,000). Rs 346,000 and Rs 616,000 keep that year's slabs continuous and match the <a href="https://www.icmainternational.com/News_Pdf/Tax_Rate_Card_for_Tax_Year_2025_26.pdf" rel="noopener">ICMA rate card for 2025-26</a>. The difference is Rs 1,000 a year at most. See <a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Circular No. 01 of 2025-26</a>.</p>
 <h2>How the calculation works</h2>
 <p>Pakistan taxes salary progressively. Your income is placed in a slab: you pay that slab's fixed amount plus its percentage on the part of your income above the slab's lower limit. For example, an annual salary of Rs 1,800,000 is in the third slab: Rs 6,000 + 11% × Rs 600,000 = Rs 72,000 a year (Rs 6,000 a month). A salary of Rs 2,400,000 is in the fourth slab: Rs 116,000 + 20% × Rs 200,000 = Rs 156,000 a year (Rs 13,000 a month).</p>
+<p>Want a quick look-up instead? See our <a href="../../guides/income-tax-on-monthly-salary-2026-27/">table of monthly tax for salaries from Rs 50,000 to Rs 1,000,000</a>.</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
 { path: "tools/salary-increment-calculator/", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
@@ -96,6 +103,7 @@ export const pages = [
 <p class="note">Note: banks in Pakistan may deduct Zakat automatically from some savings accounts on the 1st of Ramadan, unless you've filed a declaration (CZ-50). Take any amount already deducted into account.</p>
 <p class="note">This calculator gives an estimate for guidance only. It is not a religious ruling. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
+...articles,
 { path: "about/", title: "About – Pakistan Salary Tools", description: "Who builds Pakistan Salary Tools and how we keep our calculators accurate.",
   body: `<h1>About</h1><p>Pakistan Salary Tools is an independent project. We make free, simple calculators for salaried people in Pakistan. We are not affiliated with the FBR or any government body.</p><h2>How we keep it accurate</h2><ul><li>We take rates from official FBR documents and widely used professional rate cards, and link to them.</li><li>The calculation code is open source and covered by automated tests.</li><li>We review the rates after every Finance Act.</li></ul><p>Source code: <a href="${REPO}" rel="noopener">GitHub</a>.</p>`},
 { path: "contact/", title: "Contact – Pakistan Salary Tools", description: "How to report a mistake or suggest a new calculator.",
