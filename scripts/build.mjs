@@ -28,7 +28,7 @@ for (const p of pages) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-${p.home ? "<!-- google-site-verification: add tag here -->\n" : ""}<meta name="viewport" content="width=device-width, initial-scale=1">
+${p.home ? '<meta name="google-site-verification" content="jcVUv44wAOh-0-9kzhFpILEmYd6vCqKxorakSvpIDOU" />\n' : ""}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(p.title)}</title>
 <meta name="description" content="${esc(p.description)}">
 <meta name="theme-color" content="#075131">

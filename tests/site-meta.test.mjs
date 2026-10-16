@@ -37,14 +37,16 @@ test("sitemap lists every public page with its own lastmod", () => {
   assert.doesNotMatch(xml, /404/);
 });
 
-test("built sitemap matches the generator and the homepage head has a verification placeholder", () => {
+const SITE_VERIFICATION = '<meta name="google-site-verification" content="jcVUv44wAOh-0-9kzhFpILEmYd6vCqKxorakSvpIDOU" />';
+
+test("built sitemap matches the generator and the homepage head has the Search Console tag", () => {
   execFileSync("node", ["scripts/build.mjs"], { env: { ...process.env, SITE_URL: SITE } });
   const built = readFileSync("dist/sitemap.xml", "utf8");
   assert.equal(built, sitemapXml(pages, SITE));
   const home = readFileSync("dist/index.html", "utf8");
   const head = home.slice(home.indexOf("<head>"), home.indexOf("</head>"));
-  assert.match(head, /<!-- google-site-verification: add tag here -->/);
-  assert.doesNotMatch(head, /<meta[^>]*google-site-verification/);
+  assert.ok(head.includes(SITE_VERIFICATION));
+  assert.doesNotMatch(head, /<!-- google-site-verification/);
   const about = readFileSync("dist/about/index.html", "utf8");
   const aboutHead = about.slice(about.indexOf("<head>"), about.indexOf("</head>"));
   assert.doesNotMatch(aboutHead, /google-site-verification/);
