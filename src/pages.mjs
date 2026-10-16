@@ -2,8 +2,9 @@ import { icons } from "./icons.mjs";
 import { articles } from "./articles.mjs";
 const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-13";
+// Sitemap lastmod uses `updated` on these pages, or `published` on a guide. Bump that date when the page changes.
 export const pages = [
-{ path: "", home: true, title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
+{ path: "", home: true, updated: "2026-10-15", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
   description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2026-27, increment take-home and Zakat.",
   body: `<section class="hero"><div class="wrap">
 <span class="eyebrow">${icons.bolt} Updated for Tax Year 2027 (2026-27)</span>
@@ -31,7 +32,7 @@ export const pages = [
 <div class="feature"><span class="icon">${icons.calc}</span><h3>Shows its working</h3><p>See exactly which slab you're in and how each rupee of tax is worked out, with no black box.</p></div>
 <div class="feature"><span class="icon">${icons.shield}</span><h3>Open and tested</h3><p>The calculation code is <a href="https://github.com/Ha2mad/pk-salary-tools" rel="noopener">open source</a> and checked by automated tests on every change.</p></div>
 </div></div></section>`},
-{ path: "tools/salary-tax-calculator/", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2026-27 (Tax Year 2027) – FBR Slabs",
+{ path: "tools/salary-tax-calculator/", updated: "2026-10-15", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2026-27 (Tax Year 2027) – FBR Slabs",
   description: "Calculate income tax on your salary in Pakistan for 2026-27 using FBR slab rates. Monthly deduction, take-home pay and slab-by-slab working.",
   script: "page-tax.js",
   body: `<h1>Salary Tax Calculator Pakistan 2026-27</h1>
@@ -75,7 +76,7 @@ export const pages = [
 <p>Want a quick look-up instead? See our <a href="../../guides/income-tax-on-monthly-salary-2026-27/">table of monthly tax for salaries from Rs 50,000 to Rs 1,000,000</a>.</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/salary-increment-calculator/", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
+{ path: "tools/salary-increment-calculator/", updated: "2026-10-13", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
   description: "See how much of a salary raise you keep after Pakistani income tax for 2026-27, or find the gross salary needed for a target take-home pay.",
   script: "page-increment.js",
   body: `<h1>Salary Increment Calculator (Tax Year 2027)</h1>
@@ -87,7 +88,7 @@ export const pages = [
 <p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. In Tax Year 2026 a 9% surcharge applied to the whole tax bill once taxable income exceeded Rs 10 million, and take-home could dip just above that line. The Finance Act 2026 withdrew that surcharge for salary, so there is no such dip in 2026-27.</p>
 <p class="note">This is an estimate, not tax advice. See the <a href="../salary-tax-calculator/">slab table and sources</a> and our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/zakat-calculator/", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
+{ path: "tools/zakat-calculator/", updated: "2026-10-13", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
   description: "Free Zakat calculator for Pakistan. Enter today's gold or silver price per tola and your assets to work out Zakat at 2.5%.",
   script: "page-zakat.js",
   body: `<h1>Zakat Calculator</h1>
@@ -104,16 +105,16 @@ export const pages = [
 <p class="note">This calculator gives an estimate for guidance only. It is not a religious ruling. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
 ...articles,
-{ path: "about/", title: "About – Pakistan Salary Tools", description: "Who builds Pakistan Salary Tools and how we keep our calculators accurate.",
+{ path: "about/", updated: "2026-10-11", title: "About – Pakistan Salary Tools", description: "Who builds Pakistan Salary Tools and how we keep our calculators accurate.",
   body: `<h1>About</h1><p>Pakistan Salary Tools is an independent project. We make free, simple calculators for salaried people in Pakistan. We are not affiliated with the FBR or any government body.</p><h2>How we keep it accurate</h2><ul><li>We take rates from official FBR documents and widely used professional rate cards, and link to them.</li><li>The calculation code is open source and covered by automated tests.</li><li>We review the rates after every Finance Act.</li></ul><p>Source code: <a href="${REPO}" rel="noopener">GitHub</a>.</p>`},
-{ path: "contact/", title: "Contact – Pakistan Salary Tools", description: "How to report a mistake or suggest a new calculator.",
+{ path: "contact/", updated: "2026-10-13", title: "Contact – Pakistan Salary Tools", description: "How to report a mistake or suggest a new calculator.",
   body: `<h1>Contact</h1><p>Email: <a href="mailto:hammaduddin54@gmail.com">hammaduddin54@gmail.com</a></p><p>Found a mistake or want a new calculator? Please <a href="${REPO}/issues" rel="noopener">open an issue on GitHub</a>. Please don't post personal financial details there, because issues are public.</p>`},
-{ path: "privacy-policy/", title: "Privacy Policy – Pakistan Salary Tools", description: "How Pakistan Salary Tools handles your data.",
+{ path: "privacy-policy/", updated: "2026-10-13", title: "Privacy Policy – Pakistan Salary Tools", description: "How Pakistan Salary Tools handles your data.",
   body: `<h1>Privacy Policy</h1><p><small>Last updated: ${UPDATED}</small></p>
 <h2>Calculator inputs</h2><p>All calculations run in your browser. The figures you enter are never sent to us or stored by us.</p>
 <h2>Hosting logs</h2><p>Our hosting provider (currently GitHub Pages) may log technical data such as IP addresses for security and operations. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.</p>
 <h2>Cookies and advertising</h2><p>We don't currently use cookies, analytics or ads. If we add advertising, such as Google AdSense, later, third-party vendors including Google may use cookies to serve ads based on your earlier visits to this and other sites. You can opt out of personalised advertising at <a href="https://adssettings.google.com" rel="noopener">Google Ads Settings</a>. We'll update this policy before any such change, and we'll ask for consent where the law requires it.</p>
 <h2>Contact</h2><p>See our <a href="../contact/">contact page</a>.</p>`},
-{ path: "disclaimer/", title: "Disclaimer – Pakistan Salary Tools", description: "Our calculators give estimates, not professional tax or religious advice.",
+{ path: "disclaimer/", updated: "2026-10-11", title: "Disclaimer – Pakistan Salary Tools", description: "Our calculators give estimates, not professional tax or religious advice.",
   body: `<h1>Disclaimer</h1><p>The calculators on this site give estimates for general information only. They are not tax, legal, financial or religious advice. Tax law changes, and your own situation may include allowances, credits or other income that we don't model. Check important figures with the FBR, a qualified tax adviser or a scholar, as appropriate. We are not affiliated with the Federal Board of Revenue.</p>`}
 ];
