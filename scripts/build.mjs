@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { buildEmbeds } from "./embed.mjs";
 import { icons } from "../src/icons.mjs";
 import { pages } from "../src/pages.mjs";
+import { sitemapXml } from "./sitemap.mjs";
 const SITE_URL = (process.env.SITE_URL || "https://ha2mad.github.io/pk-salary-tools/").replace(/\/?$/, "/");
 const out = "dist";
 rmSync(out, { recursive: true, force: true });
@@ -27,7 +28,7 @@ for (const p of pages) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+${p.home ? '<meta name="google-site-verification" content="jcVUv44wAOh-0-9kzhFpILEmYd6vCqKxorakSvpIDOU" />\n' : ""}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(p.title)}</title>
 <meta name="description" content="${esc(p.description)}">
 <meta name="theme-color" content="#075131">
@@ -70,12 +71,7 @@ ${p.script ? `<script type="module" src="${asset(p.script)}"></script>` : ""}
   mkdirSync(out + "/" + p.path, { recursive: true });
   writeFileSync(out + "/" + p.path + "index.html", html);
 }
-const today = new Date().toISOString().slice(0, 10);
-writeFileSync(out + "/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map((p) => `  <url><loc>${SITE_URL}${p.path}</loc><lastmod>${today}</lastmod></url>`).join("\n")}
-</urlset>
-`);
+writeFileSync(out + "/sitemap.xml", sitemapXml(pages, SITE_URL));
 writeFileSync(out + "/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE_URL}sitemap.xml\n`);
 writeFileSync(out + "/404.html", `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found</title></head><body><main><h1>Page not found</h1><p><a href="${SITE_URL}">Go to the home page</a></p></main></body></html>\n`);
 buildEmbeds(out, SITE_URL);
