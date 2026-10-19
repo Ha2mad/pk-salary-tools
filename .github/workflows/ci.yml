@@ -27,7 +27,14 @@ jobs:
       - name: External link check
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --max-retries 3 --accept 200,403,429 dist
+          # Root-relative assets are /pk-salary-tools/assets/... while files live in dist/assets.
+          # --base would also rewrite directory-relative links and drop the project path.
+          # Map that prefix onto dist, and fail the job only on the weekly schedule.
+          args: >-
+            --no-progress --max-retries 3 --accept 200,403,429
+            --root-dir ${{ github.workspace }}/dist
+            --remap "file://${{ github.workspace }}/dist/pk-salary-tools file://${{ github.workspace }}/dist"
+            dist
           fail: ${{ github.event_name == 'schedule' }}
       - uses: actions/upload-pages-artifact@v3
         with: { path: dist }
