@@ -4,7 +4,7 @@ const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-13";
 // Sitemap lastmod uses `updated` on these pages, or `published` on a guide. Bump that date when the page changes.
 export const pages = [
-{ path: "", home: true, updated: "2026-10-15", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
+{ path: "", home: true, updated: "2026-10-19", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
   description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2026-27, increment take-home and Zakat.",
   body: `<section class="hero"><div class="wrap">
 <span class="eyebrow">${icons.bolt} Updated for Tax Year 2027 (2026-27)</span>
@@ -24,6 +24,7 @@ export const pages = [
 <div class="section-head"><h2>Guides</h2></div>
 <ul class="cards">
 <li class="card"><span class="icon">${icons.doc}</span><h3><a href="{{root}}guides/income-tax-on-monthly-salary-2026-27/">Income tax on monthly salary 2026-27</a></h3><p>A ready table of monthly tax and take-home pay from Rs 50,000 to Rs 1,000,000, with last year's figures for comparison.</p><span class="more">Read the guide →</span></li>
+<li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}guides/gross-salary-for-take-home-pay-2026-27/">Gross salary for your take-home pay</a></h3><p>The gross monthly salary you need to take home Rs 50,000 to Rs 500,000 after tax in 2026-27, with the formula and a worked example.</p><span class="more">Read the guide →</span></li>
 </ul></div></section>
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="section-head"><h2>Why trust these numbers?</h2></div>
@@ -76,7 +77,7 @@ export const pages = [
 <p>Want a quick look-up instead? See our <a href="../../guides/income-tax-on-monthly-salary-2026-27/">table of monthly tax for salaries from Rs 50,000 to Rs 1,000,000</a>.</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/salary-increment-calculator/", updated: "2026-10-13", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
+{ path: "tools/salary-increment-calculator/", updated: "2026-10-19", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",
   description: "See how much of a salary raise you keep after Pakistani income tax for 2026-27, or find the gross salary needed for a target take-home pay.",
   script: "page-increment.js",
   body: `<h1>Salary Increment Calculator (Tax Year 2027)</h1>
@@ -84,6 +85,7 @@ export const pages = [
 <div id="tool"></div><noscript><p>This calculator needs JavaScript.</p></noscript>
 <h2>How it works</h2>
 <p>We work out the annual tax on your current salary and on your new salary, then compare take-home pay. The "share you keep" is extra take-home divided by extra gross pay. The reverse calculator searches for the lowest gross salary whose take-home after tax reaches your target.</p>
+<p>Planning around a job offer? See our <a href="../../guides/gross-salary-for-take-home-pay-2026-27/">table of the gross salary needed for take-home pay from Rs 50,000 to Rs 500,000 a month</a>.</p>
 <h2>Will a raise ever lower my take-home?</h2>
 <p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. In Tax Year 2026 a 9% surcharge applied to the whole tax bill once taxable income exceeded Rs 10 million, and take-home could dip just above that line. The Finance Act 2026 withdrew that surcharge for salary, so there is no such dip in 2026-27.</p>
 <p class="note">This is an estimate, not tax advice. See the <a href="../salary-tax-calculator/">slab table and sources</a> and our <a href="../../disclaimer/">disclaimer</a>.</p>

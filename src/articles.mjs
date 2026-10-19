@@ -63,5 +63,62 @@ export const articles = [
 <li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (Tax Year 2026 rates used for the comparison)</li>
 </ul>
 <p class="note">This guide gives estimates for general information only. It is not tax advice. Your actual tax depends on your allowances, credits, other income and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
-<p><small>Published: 15 October 2026</small></p>`}
+<p><small>Published: 15 October 2026</small></p>`},
+{ path: "guides/gross-salary-for-take-home-pay-2026-27/", eyebrow: "Guide", published: "2026-10-19",
+  title: "Gross Salary Needed for Your Take-Home Pay in Pakistan 2026-27 (Rs 50,000 to Rs 500,000)",
+  description: "What gross salary do you need to take home Rs 100,000, 150,000, 200,000 or 300,000 a month after income tax in Pakistan in Tax Year 2027? A ready table, the formula and a worked example.",
+  body: `<h1>What gross salary gives you the take-home pay you want in 2026-27?</h1>
+<p class="lead">Job offers in Pakistan are usually quoted as a gross salary, but what you plan your life around is the amount that reaches your bank account. If you know the take-home pay you need, the table below shows the gross monthly salary that gets you there after income tax in Tax Year 2027 (1 July 2026 – 30 June 2027). Every figure comes from the reverse calculator in our <a href="../../tools/salary-increment-calculator/">Salary Increment Calculator</a>, using the salaried rates set by the Finance Act 2026.</p>
+<h2>Gross salary needed for each take-home amount, Tax Year 2027</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Take-home you want (monthly)</th><th scope="col">Gross salary needed (monthly)</th><th scope="col">Gross salary needed (annual)</th><th scope="col">Monthly income tax</th><th scope="col">Rate on your next rupee</th></tr></thead><tbody>
+<tr><td>Rs 50,000</td><td>Rs 50,000</td><td>Rs 600,000</td><td>Rs 0</td><td>0%</td></tr>
+<tr><td>Rs 75,000</td><td>Rs 75,253</td><td>Rs 903,030</td><td>Rs 253</td><td>1%</td></tr>
+<tr><td>Rs 100,000</td><td>Rs 100,562</td><td>Rs 1,206,742</td><td>Rs 562</td><td>11%</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 156,742</td><td>Rs 1,880,899</td><td>Rs 6,742</td><td>11%</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 216,250</td><td>Rs 2,595,000</td><td>Rs 16,250</td><td>20%</td></tr>
+<tr><td>Rs 250,000</td><td>Rs 279,556</td><td>Rs 3,354,667</td><td>Rs 29,556</td><td>25%</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 346,479</td><td>Rs 4,157,746</td><td>Rs 46,479</td><td>29%</td></tr>
+<tr><td>Rs 400,000</td><td>Rs 488,235</td><td>Rs 5,858,823</td><td>Rs 88,235</td><td>32%</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 637,692</td><td>Rs 7,652,307</td><td>Rs 137,692</td><td>35%</td></tr>
+</tbody></table></div>
+<p>The annual figure is the lowest whole-rupee yearly salary whose take-home after tax reaches twelve times your monthly target. Monthly figures are that annual amount divided by 12 and rounded to the nearest rupee. The table assumes the same salary all year, that all of it is taxable, and that you have no other income.</p>
+<h2>Worked example: Rs 200,000 a month in hand</h2>
+<ol>
+<li>Yearly take-home you want: Rs 200,000 × 12 = Rs 2,400,000.</li>
+<li>A gross salary a little above that will fall in the slab from Rs 2,200,001 to Rs 3,200,000, where tax is Rs 116,000 plus 20% of the amount above Rs 2,200,000.</li>
+<li>In that slab, take-home = gross − Rs 116,000 − 20% × (gross − Rs 2,200,000), which simplifies to 80% of gross + Rs 324,000.</li>
+<li>Set that equal to Rs 2,400,000: 80% of gross = Rs 2,076,000, so gross = Rs 2,595,000 a year.</li>
+<li>Check: Rs 2,595,000 is inside the slab. Tax = Rs 116,000 + 20% × Rs 395,000 = Rs 195,000, and Rs 2,595,000 − Rs 195,000 = Rs 2,400,000.</li>
+</ol>
+<p>So you need a gross salary of about Rs 216,250 a month. About Rs 16,250 of that goes to income tax each month, and Rs 200,000 reaches you.</p>
+<h2>The formula, for any target</h2>
+<p>Inside one slab, tax is a fixed amount plus a rate on the part above the slab's lower limit. That gives:</p>
+<p><strong>Gross = (target take-home + fixed amount − rate × lower limit) ÷ (1 − rate)</strong></p>
+<p>Use yearly amounts. Pick the slab you think the gross will land in, work out the gross, and check it really falls inside that slab. If it doesn't, try the next slab up. The slabs for 2026-27 are on our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a> page. Or skip the algebra: the reverse calculator does this search for you.</p>
+<h2>How this compares with 2025-26</h2>
+<p>The Finance Act 2026 cut the salaried rates from the fourth slab upwards. So for take-home targets that need a gross salary above Rs 2,200,000 a year, the gross you need is now lower than in Tax Year 2026. For smaller targets nothing changed, because the first three slabs stayed the same.</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Take-home you want (monthly)</th><th scope="col">Gross needed 2025-26</th><th scope="col">Gross needed 2026-27</th><th scope="col">Lower by</th></tr></thead><tbody>
+<tr><td>Rs 150,000</td><td>Rs 156,742</td><td>Rs 156,742</td><td>Rs 0</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 217,532</td><td>Rs 216,250</td><td>Rs 1,282</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 356,538</td><td>Rs 346,479</td><td>Rs 10,059</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 664,231</td><td>Rs 637,692</td><td>Rs 26,539</td></tr>
+</tbody></table></div>
+<p class="note">The 2025-26 figures use fixed amounts of Rs 346,000 and Rs 616,000 for the two top slabs of that year, which keep the slabs continuous and match the ICMA rate card. FBR Circular 01 of 2025-26 prints Rs 345,000 and Rs 615,000. Details are on the <a href="../../tools/salary-tax-calculator/">calculator page</a>.</p>
+<h2>Before you accept an offer</h2>
+<ul>
+<li><strong>Ask what the gross figure includes.</strong> A "package" can include items that aren't paid to you every month, such as an employer's provident fund contribution, a car or a yearly bonus. Compare offers on the monthly salary you will actually be paid.</li>
+<li><strong>Income tax isn't the only deduction.</strong> Your own provident fund contribution, EOBI, loan repayments or other deductions on your payslip reduce what reaches your bank account. They aren't in this table.</li>
+<li><strong>Not all pay may be taxable.</strong> If part of your salary is exempt, or you can claim tax credits, you pay less tax than shown here. Enter only your taxable salary in our calculators.</li>
+<li><strong>Your employer deducts tax monthly.</strong> Under section 149 of the Income Tax Ordinance 2001, tax is withheld from each salary payment based on your estimated salary for the year, and is credited against your final liability when you file your return.</li>
+</ul>
+<p><a class="btn btn-primary" href="../../tools/salary-increment-calculator/">Find the gross salary for your exact target</a></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://senate.gov.pk/uploads/documents/1782733238_492.pdf" rel="noopener">Finance Act, 2026</a> (Gazette of Pakistan, Extraordinary, 26 June 2026): salaried rate table in clause (2) of Division I, Part I, First Schedule</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026), paragraph 7 (relief in salaried rates) and paragraph 8 (withdrawal of the 9% surcharge on salaried individuals)</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202681113864992WithholdingTaxRatesCard2027.pdf" rel="noopener">FBR Withholding Tax Rate Card for Tax Year 2027</a>, section 149 (salary)</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (Tax Year 2026 rates used for the comparison)</li>
+</ul>
+<p class="note">This guide gives estimates for general information only. It is not tax or financial advice. Your actual tax depends on your allowances, credits, other income and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
+<p><small>Published: 19 October 2026</small></p>`}
 ];
