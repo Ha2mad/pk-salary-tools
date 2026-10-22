@@ -9,12 +9,13 @@ const SITE = "https://ha2mad.github.io/pk-salary-tools/";
 
 // Content last-modified dates from page data / git history of each page, not the build clock.
 const EXPECTED_LASTMOD = {
-  "": "2026-10-19",
-  "tools/salary-tax-calculator/": "2026-10-15",
+  "": "2026-10-22",
+  "tools/salary-tax-calculator/": "2026-10-22",
   "tools/salary-increment-calculator/": "2026-10-19",
   "tools/zakat-calculator/": "2026-10-13",
   "guides/income-tax-on-monthly-salary-2026-27/": "2026-10-15",
   "guides/gross-salary-for-take-home-pay-2026-27/": "2026-10-19",
+  "guides/tax-on-bonus-2026-27/": "2026-10-22",
   "about/": "2026-10-11",
   "contact/": "2026-10-13",
   "privacy-policy/": "2026-10-13",

@@ -4,7 +4,7 @@ const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-13";
 // Sitemap lastmod uses `updated` on these pages, or `published` on a guide. Bump that date when the page changes.
 export const pages = [
-{ path: "", home: true, updated: "2026-10-19", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
+{ path: "", home: true, updated: "2026-10-22", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
   description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2026-27, increment take-home and Zakat.",
   body: `<section class="hero"><div class="wrap">
 <span class="eyebrow">${icons.bolt} Updated for Tax Year 2027 (2026-27)</span>
@@ -25,6 +25,7 @@ export const pages = [
 <ul class="cards">
 <li class="card"><span class="icon">${icons.doc}</span><h3><a href="{{root}}guides/income-tax-on-monthly-salary-2026-27/">Income tax on monthly salary 2026-27</a></h3><p>A ready table of monthly tax and take-home pay from Rs 50,000 to Rs 1,000,000, with last year's figures for comparison.</p><span class="more">Read the guide →</span></li>
 <li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}guides/gross-salary-for-take-home-pay-2026-27/">Gross salary for your take-home pay</a></h3><p>The gross monthly salary you need to take home Rs 50,000 to Rs 500,000 after tax in 2026-27, with the formula and a worked example.</p><span class="more">Read the guide →</span></li>
+<li class="card"><span class="icon">${icons.coins}</span><h3><a href="{{root}}guides/tax-on-bonus-2026-27/">Tax on your bonus 2026-27</a></h3><p>How much tax comes off a one-month or two-month bonus, why it's taxed at your top slab rate, and what you actually keep.</p><span class="more">Read the guide →</span></li>
 </ul></div></section>
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="section-head"><h2>Why trust these numbers?</h2></div>
@@ -33,7 +34,7 @@ export const pages = [
 <div class="feature"><span class="icon">${icons.calc}</span><h3>Shows its working</h3><p>See exactly which slab you're in and how each rupee of tax is worked out, with no black box.</p></div>
 <div class="feature"><span class="icon">${icons.shield}</span><h3>Open and tested</h3><p>The calculation code is <a href="https://github.com/Ha2mad/pk-salary-tools" rel="noopener">open source</a> and checked by automated tests on every change.</p></div>
 </div></div></section>`},
-{ path: "tools/salary-tax-calculator/", updated: "2026-10-15", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2026-27 (Tax Year 2027) – FBR Slabs",
+{ path: "tools/salary-tax-calculator/", updated: "2026-10-22", eyebrow: "Free calculator", title: "Salary Tax Calculator Pakistan 2026-27 (Tax Year 2027) – FBR Slabs",
   description: "Calculate income tax on your salary in Pakistan for 2026-27 using FBR slab rates. Monthly deduction, take-home pay and slab-by-slab working.",
   script: "page-tax.js",
   body: `<h1>Salary Tax Calculator Pakistan 2026-27</h1>
@@ -74,7 +75,7 @@ export const pages = [
 <p class="note">Tax Year 2026 comparison figures use fixed amounts of Rs 346,000 and Rs 616,000. FBR Circular 01 of 2025-26 prints Rs 345,000 and Rs 615,000 for those two slabs. Those printed numbers don't follow from the band below (116,000 + 23% × 1,000,000 = 346,000). Rs 346,000 and Rs 616,000 keep that year's slabs continuous and match the <a href="https://www.icmainternational.com/News_Pdf/Tax_Rate_Card_for_Tax_Year_2025_26.pdf" rel="noopener">ICMA rate card for 2025-26</a>. The difference is Rs 1,000 a year at most. See <a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Circular No. 01 of 2025-26</a>.</p>
 <h2>How the calculation works</h2>
 <p>Pakistan taxes salary progressively. Your income is placed in a slab: you pay that slab's fixed amount plus its percentage on the part of your income above the slab's lower limit. For example, an annual salary of Rs 1,800,000 is in the third slab: Rs 6,000 + 11% × Rs 600,000 = Rs 72,000 a year (Rs 6,000 a month). A salary of Rs 2,400,000 is in the fourth slab: Rs 116,000 + 20% × Rs 200,000 = Rs 156,000 a year (Rs 13,000 a month).</p>
-<p>Want a quick look-up instead? See our <a href="../../guides/income-tax-on-monthly-salary-2026-27/">table of monthly tax for salaries from Rs 50,000 to Rs 1,000,000</a>.</p>
+<p>Want a quick look-up instead? See our <a href="../../guides/income-tax-on-monthly-salary-2026-27/">table of monthly tax for salaries from Rs 50,000 to Rs 1,000,000</a>. Getting a bonus? See <a href="../../guides/tax-on-bonus-2026-27/">how much tax comes off a bonus in 2026-27</a>.</p>
 <p class="note">This is an estimate, not tax advice. Your actual tax depends on allowances, tax credits, other income and tax already withheld. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
 { path: "tools/salary-increment-calculator/", updated: "2026-10-19", eyebrow: "Free calculator", title: "Salary Increment Calculator Pakistan 2026-27 – Take-home After Tax",

@@ -63,3 +63,30 @@ test("gross-for-net worked example: Rs 200,000/month take-home", () => {
   assert.match(gbody, /gross = Rs 2,595,000 a year/);
   assert.match(gbody, /Tax = Rs 116,000 \+ 20% × Rs 395,000 = Rs 195,000/);
 });
+
+const bbody = articles.find((a) => a.path.startsWith("guides/tax-on-bonus")).body;
+const btables = [...bbody.matchAll(/<table>([\s\S]*?)<\/table>/g)].map((m) => [...m[1].matchAll(/<tr><td>(Rs [\d,]+)<\/td>(.*?)<\/tr>/g)]);
+const extra = (a, b, y = "2027") => computeTax(a + b, y).annualTax - computeTax(a, y).annualTax;
+test("bonus tables match calculator logic (one- and two-month bonus, Tax Year 2027)", () => {
+  assert.equal(btables.length, 3);
+  [1, 2].forEach((k, i) => {
+    assert.equal(btables[i].length, 7);
+    for (const [, m, rest] of btables[i]) {
+      const monthly = Number(m.replace(/\D/g, "")), bonus = monthly * k, x = extra(monthly * 12, bonus);
+      assert.deepEqual(cellsOf(rest), [rs(bonus), rs(x), rs(bonus - x), ((bonus - x) / bonus * 100).toFixed(1) + "%"]);
+    }
+  });
+});
+test("bonus comparison matches calculator logic (2026 vs 2027)", () => {
+  assert.equal(btables[2].length, 5);
+  for (const [, m, rest] of btables[2]) {
+    const monthly = Number(m.replace(/\D/g, "")), a = extra(monthly * 12, monthly * 2, "2026"), b = extra(monthly * 12, monthly * 2);
+    assert.deepEqual(cellsOf(rest), [rs(a), rs(b), rs(a - b)]);
+  }
+});
+test("bonus worked example: Rs 200,000/month with a one-month bonus", () => {
+  assert.equal(computeTax(2400000, "2027").annualTax, 156000);
+  assert.equal(computeTax(2600000, "2027").annualTax, 196000);
+  assert.match(bbody, /Rs 196,000 − Rs 156,000 = Rs 40,000/);
+  assert.equal((computeTax(2600000, "2027").effectiveRate * 100).toFixed(2), "7.54");
+});

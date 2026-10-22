@@ -120,5 +120,68 @@ export const articles = [
 <li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (Tax Year 2026 rates used for the comparison)</li>
 </ul>
 <p class="note">This guide gives estimates for general information only. It is not tax or financial advice. Your actual tax depends on your allowances, credits, other income and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
-<p><small>Published: 19 October 2026</small></p>`}
+<p><small>Published: 19 October 2026</small></p>`},
+{ path: "guides/tax-on-bonus-2026-27/", eyebrow: "Guide", published: "2026-10-22",
+  title: "Tax on Bonus in Pakistan 2026-27: How Much of Your Bonus You Keep",
+  description: "Is a bonus taxable in Pakistan? How much income tax comes off a one-month or two-month bonus in Tax Year 2027, with ready tables, a worked example and why your bonus month deduction looks so big.",
+  body: `<h1>How much tax will you pay on your bonus in 2026-27?</h1>
+<p class="lead">A bonus is salary in the eyes of the tax law, so it is taxed at the same slab rates as the rest of your pay. What surprises most people is how much of it goes: the bonus sits on top of your salary, so it is taxed at your highest slab rate, not your average rate. The tables below show the extra tax and what you keep for a one-month and a two-month bonus in Tax Year 2027 (1 July 2026 – 30 June 2027). Every figure comes from the same code that runs our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a>, using the salaried rates set by the Finance Act 2026.</p>
+<h2>Is a bonus taxable in Pakistan?</h2>
+<p>Yes. Section 12(2)(a) of the Income Tax Ordinance 2001 defines salary to include "any pay, wages or other remuneration provided to an employee, including leave pay, payment in lieu of leave, overtime payment, bonus, commission, fees, gratuity or work condition supplements". So a performance bonus, an annual bonus or an Eid bonus paid by your employer is added to your salary for the year, unless a specific exemption in the Ordinance covers it.</p>
+<h2>How the tax on a bonus is worked out</h2>
+<p>The extra tax is simply the tax on your yearly salary <em>with</em> the bonus, minus the tax on your yearly salary <em>without</em> it. Because the bonus is the top slice of your income, it is taxed at the rate of your highest slab, and part of it can spill into the next slab up.</p>
+<h2>Tax on a one-month bonus, Tax Year 2027</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Monthly salary</th><th scope="col">Bonus</th><th scope="col">Extra tax on the bonus</th><th scope="col">Bonus you keep</th><th scope="col">Share you keep</th></tr></thead><tbody>
+<tr><td>Rs 100,000</td><td>Rs 100,000</td><td>Rs 11,000</td><td>Rs 89,000</td><td>89.0%</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 150,000</td><td>Rs 16,500</td><td>Rs 133,500</td><td>89.0%</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 200,000</td><td>Rs 40,000</td><td>Rs 160,000</td><td>80.0%</td></tr>
+<tr><td>Rs 250,000</td><td>Rs 250,000</td><td>Rs 52,500</td><td>Rs 197,500</td><td>79.0%</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 300,000</td><td>Rs 75,000</td><td>Rs 225,000</td><td>75.0%</td></tr>
+<tr><td>Rs 400,000</td><td>Rs 400,000</td><td>Rs 116,000</td><td>Rs 284,000</td><td>71.0%</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 500,000</td><td>Rs 160,000</td><td>Rs 340,000</td><td>68.0%</td></tr>
+</tbody></table></div>
+<h2>Tax on a two-month bonus, Tax Year 2027</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Monthly salary</th><th scope="col">Bonus</th><th scope="col">Extra tax on the bonus</th><th scope="col">Bonus you keep</th><th scope="col">Share you keep</th></tr></thead><tbody>
+<tr><td>Rs 100,000</td><td>Rs 200,000</td><td>Rs 22,000</td><td>Rs 178,000</td><td>89.0%</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 300,000</td><td>Rs 33,000</td><td>Rs 267,000</td><td>89.0%</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 400,000</td><td>Rs 80,000</td><td>Rs 320,000</td><td>80.0%</td></tr>
+<tr><td>Rs 250,000</td><td>Rs 500,000</td><td>Rs 115,000</td><td>Rs 385,000</td><td>77.0%</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 600,000</td><td>Rs 154,000</td><td>Rs 446,000</td><td>74.3%</td></tr>
+<tr><td>Rs 400,000</td><td>Rs 800,000</td><td>Rs 232,000</td><td>Rs 568,000</td><td>71.0%</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 1,000,000</td><td>Rs 320,000</td><td>Rs 680,000</td><td>68.0%</td></tr>
+</tbody></table></div>
+<p>Both tables assume the same monthly salary for all twelve months, that all of it is taxable, and that the bonus is paid in the same tax year. Notice that at Rs 250,000 and Rs 300,000 a month, a two-month bonus keeps a slightly smaller share than a one-month bonus. That is because the bigger bonus pushes part of it into the next slab (25% and 29% respectively).</p>
+<h2>Worked example: Rs 200,000 a month with a one-month bonus</h2>
+<ol>
+<li>Salary without the bonus: Rs 200,000 × 12 = Rs 2,400,000 a year. That is in the slab from Rs 2,200,001 to Rs 3,200,000, where tax is Rs 116,000 plus 20% of the amount above Rs 2,200,000.</li>
+<li>Tax without the bonus: Rs 116,000 + 20% × Rs 200,000 = Rs 156,000.</li>
+<li>Salary with a Rs 200,000 bonus: Rs 2,600,000, still inside the same slab.</li>
+<li>Tax with the bonus: Rs 116,000 + 20% × Rs 400,000 = Rs 196,000.</li>
+<li>Extra tax on the bonus: Rs 196,000 − Rs 156,000 = Rs 40,000, so you keep Rs 160,000 of the Rs 200,000 bonus (80%).</li>
+</ol>
+<p>Your overall effective rate for the year goes from 6.50% to about 7.54%, but the bonus itself is taxed at 20%. That is why a bonus feels more heavily taxed than your monthly pay.</p>
+<h2>Why the deduction in your bonus month can look huge</h2>
+<p>Under section 149 of the Income Tax Ordinance, your employer deducts tax from each payment at your average rate, worked out on your estimated salary for the whole year. When a bonus is paid, the employer usually raises its estimate of your yearly salary and recovers the extra tax, so the deduction in that month (or over the remaining months) can be much bigger than usual. How it is spread depends on your employer's payroll. It doesn't change the total: what is deducted over the year is credited against your actual tax when you file your return, and any excess can be claimed back.</p>
+<h2>How this compares with 2025-26</h2>
+<p>The Finance Act 2026 cut the salaried rates from the fourth slab upwards (from 23% to 20% in the slab above Rs 2,200,000, for example). So if your salary plus bonus goes above Rs 2,200,000 a year, you now pay less tax on the same bonus than in Tax Year 2026. Below that, nothing changed. Here is the extra tax on a two-month bonus in both years:</p>
+<div class="table-scroll"><table><thead><tr><th scope="col">Monthly salary</th><th scope="col">Extra tax 2025-26</th><th scope="col">Extra tax 2026-27</th><th scope="col">Lower by</th></tr></thead><tbody>
+<tr><td>Rs 100,000</td><td>Rs 22,000</td><td>Rs 22,000</td><td>Rs 0</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 33,000</td><td>Rs 33,000</td><td>Rs 0</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 92,000</td><td>Rs 80,000</td><td>Rs 12,000</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 185,000</td><td>Rs 154,000</td><td>Rs 31,000</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 350,000</td><td>Rs 320,000</td><td>Rs 30,000</td></tr>
+</tbody></table></div>
+<p class="note">The 2025-26 figures use fixed amounts of Rs 346,000 and Rs 616,000 for the two top slabs of that year, which keep the slabs continuous and match the ICMA rate card. FBR Circular 01 of 2025-26 prints Rs 345,000 and Rs 615,000. Details are on the <a href="../../tools/salary-tax-calculator/">calculator page</a>.</p>
+<h2>Work out the tax on your own bonus</h2>
+<p>Enter your yearly salary in our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a>, note the tax, then enter your yearly salary plus the bonus. The difference is the tax on your bonus. Our <a href="../../tools/salary-increment-calculator/">Salary Increment Calculator</a> does the same for a pay raise, including raises that cross a slab.</p>
+<p><a class="btn btn-primary" href="../../tools/salary-tax-calculator/">Calculate tax with your bonus</a></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://download1.fbr.gov.pk/Docs/2026724177725705IncomeTaxOrdinanace2001.pdf" rel="noopener">Income Tax Ordinance, 2001 (FBR, amended up to 30 June 2026)</a>: section 12(2)(a) (bonus is salary) and section 149 (tax withheld from salary)</li>
+<li><a href="https://senate.gov.pk/uploads/documents/1782733238_492.pdf" rel="noopener">Finance Act, 2026</a> (Gazette of Pakistan, Extraordinary, 26 June 2026): salaried rate table in clause (2) of Division I, Part I, First Schedule</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026), paragraphs 7 and 8 (salaried rates and withdrawal of the 9% surcharge)</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (Tax Year 2026 rates used for the comparison)</li>
+</ul>
+<p class="note">This guide gives estimates for general information only. It is not tax advice. Your actual tax depends on your allowances, credits, other income, any exemptions and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
+<p><small>Published: 22 October 2026</small></p>`}
 ];
