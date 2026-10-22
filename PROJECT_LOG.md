@@ -75,3 +75,11 @@
 - Health: all 10 sitemap URLs, sitemap.xml, robots.txt and the tax embed return 200 on GitHub Pages; the new guide is live. Blogger home, sitemap.xml, robots.txt and feeds return 200 (still 7 posts, 0 pages).
 - PROBLEM: the Blogger email again couldn't be sent from the routine run (no send tool for the bot inbox here, including in executor subagents). Body saved at ../blogger/posts/2026-10-19-gross-salary-for-take-home-pay-2026-27.html; handed to the main assistant to send.
 - PROBLEM (still open): the Oct 15 guide never reached Blogger (no new post in the feed), and the three live Blogger calculators plus the slabs article still use Tax Year 2026 rates (23% slab, "2025-26" labels).
+
+## 2026-10-22 10:35 PKT: Routine run (content + health check)
+- Pulled remote main first (PR #4: lychee root-relative asset fix).
+- New guide: /guides/tax-on-bonus-2026-27/ ("Tax on Bonus in Pakistan 2026-27: How Much of Your Bonus You Keep"). Bonus is salary under s.12(2)(a) ITO 2001 (checked in the FBR ordinance PDF amended to 30 June 2026); extra tax and share kept for one-month and two-month bonuses at 7 salary levels, slab-crossing note, worked example (Rs 200,000/month + Rs 200,000 bonus: extra tax Rs 40,000, keep 80%), s.149 bonus-month withholding explainer, 2025-26 comparison, sources, disclaimer. Linked from the home Guides section and the tax calculator page (both lastmod 2026-10-22). Topic not covered before.
+- tests/articles.test.mjs recomputes all three bonus tables and the worked example from tax.js; site-meta lastmods updated. 78/78 tests, lint, link check pass. Pushed e63ea5f; CI run 39728153815 succeeded (check, deploy, verify).
+- Health: all 11 sitemap URLs, sitemap.xml and robots.txt return 200 on GitHub Pages; the new guide is live. Blogger home, sitemap.xml, robots.txt and feeds return 200 (still 7 posts, 0 pages).
+- PROBLEM: the Blogger email again couldn't be sent from the routine run (no send tool for the bot inbox in routine runs). Body saved at ../blogger/posts/2026-10-22-tax-on-bonus-2026-27.html; handed to the main assistant to send.
+- PROBLEM (still open): the Oct 15 and Oct 19 guides never reached Blogger, and the live Blogger calculators plus the slabs article still use Tax Year 2026 rates.
