@@ -4,7 +4,7 @@ const REPO = "https://github.com/Ha2mad/pk-salary-tools";
 const UPDATED = "2026-10-13";
 // Sitemap lastmod uses `updated` on these pages, or `published` on a guide. Bump that date when the page changes.
 export const pages = [
-{ path: "", home: true, updated: "2026-10-22", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
+{ path: "", home: true, updated: "2026-10-26", title: "Pakistan Salary Tools – Free Salary Tax, Increment & Zakat Calculators",
   description: "Free, accurate, privacy-friendly calculators for Pakistani salaried people: FBR salary tax 2026-27, increment take-home and Zakat.",
   body: `<section class="hero"><div class="wrap">
 <span class="eyebrow">${icons.bolt} Updated for Tax Year 2027 (2026-27)</span>
@@ -26,6 +26,7 @@ export const pages = [
 <li class="card"><span class="icon">${icons.doc}</span><h3><a href="{{root}}guides/income-tax-on-monthly-salary-2026-27/">Income tax on monthly salary 2026-27</a></h3><p>A ready table of monthly tax and take-home pay from Rs 50,000 to Rs 1,000,000, with last year's figures for comparison.</p><span class="more">Read the guide →</span></li>
 <li class="card"><span class="icon">${icons.trend}</span><h3><a href="{{root}}guides/gross-salary-for-take-home-pay-2026-27/">Gross salary for your take-home pay</a></h3><p>The gross monthly salary you need to take home Rs 50,000 to Rs 500,000 after tax in 2026-27, with the formula and a worked example.</p><span class="more">Read the guide →</span></li>
 <li class="card"><span class="icon">${icons.coins}</span><h3><a href="{{root}}guides/tax-on-bonus-2026-27/">Tax on your bonus 2026-27</a></h3><p>How much tax comes off a one-month or two-month bonus, why it's taxed at your top slab rate, and what you actually keep.</p><span class="more">Read the guide →</span></li>
+<li class="card"><span class="icon">${icons.shield}</span><h3><a href="{{root}}guides/zakat-tax-deduction-salaried-2026-27/">Does Zakat reduce your tax?</a></h3><p>When Zakat counts as a deductible allowance under section 60, how much tax it saves at each salary level in 2026-27, and how to claim it.</p><span class="more">Read the guide →</span></li>
 </ul></div></section>
 <section class="section" style="padding-top:0"><div class="wrap">
 <div class="section-head"><h2>Why trust these numbers?</h2></div>
@@ -91,7 +92,7 @@ export const pages = [
 <p>No. Each slab only taxes the part of your income above its lower limit, so a raise always increases take-home pay. Only the extra rupees are taxed at the higher rate. In Tax Year 2026 a 9% surcharge applied to the whole tax bill once taxable income exceeded Rs 10 million, and take-home could dip just above that line. The Finance Act 2026 withdrew that surcharge for salary, so there is no such dip in 2026-27.</p>
 <p class="note">This is an estimate, not tax advice. See the <a href="../salary-tax-calculator/">slab table and sources</a> and our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
-{ path: "tools/zakat-calculator/", updated: "2026-10-13", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
+{ path: "tools/zakat-calculator/", updated: "2026-10-26", eyebrow: "Free calculator", title: "Zakat Calculator Pakistan – Cash, Gold, Silver & Savings",
   description: "Free Zakat calculator for Pakistan. Enter today's gold or silver price per tola and your assets to work out Zakat at 2.5%.",
   script: "page-zakat.js",
   body: `<h1>Zakat Calculator</h1>
@@ -105,6 +106,7 @@ export const pages = [
 </ul>
 <p>Things like your home, car and household items for personal use are generally not zakatable. Rules differ between schools of thought, especially for jewellery that is worn, so please check with a scholar you trust.</p>
 <p class="note">Note: banks in Pakistan may deduct Zakat automatically from some savings accounts on the 1st of Ramadan, unless you've filed a declaration (CZ-50). Take any amount already deducted into account.</p>
+<p>Zakat deducted by your bank can also lower your income tax. See <a href="../../guides/zakat-tax-deduction-salaried-2026-27/">whether Zakat is deductible from income tax and how much it saves</a>.</p>
 <p class="note">This calculator gives an estimate for guidance only. It is not a religious ruling. See our <a href="../../disclaimer/">disclaimer</a>.</p>
 <p><small>Last reviewed: ${UPDATED}</small></p>`},
 ...articles,

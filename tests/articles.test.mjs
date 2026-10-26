@@ -90,3 +90,18 @@ test("bonus worked example: Rs 200,000/month with a one-month bonus", () => {
   assert.match(bbody, /Rs 196,000 − Rs 156,000 = Rs 40,000/);
   assert.equal((computeTax(2600000, "2027").effectiveRate * 100).toFixed(2), "7.54");
 });
+
+const zbody = articles.find((a) => a.path.startsWith("guides/zakat-tax-deduction")).body;
+const zrows = [...zbody.matchAll(/<tr><td>(Rs [\d,]+)<\/td>(.*?)<\/tr>/g)];
+test("Zakat allowance table matches calculator logic (Rs 50,000, Tax Year 2027)", () => {
+  assert.equal(zrows.length, 7);
+  for (const [, m, rest] of zrows) {
+    const y = Number(m.replace(/\D/g, "")) * 12, a = computeTax(y, "2027").annualTax, b = computeTax(Math.max(0, y - 50000), "2027").annualTax;
+    assert.deepEqual(cellsOf(rest), [rs(a), rs(b), rs(a - b), ((a - b) / 50000 * 100).toFixed(1) + "%"]);
+  }
+});
+test("Zakat worked example: Rs 200,000/month, Rs 50,000 Zakat", () => {
+  assert.equal(computeTax(2350000, "2027").annualTax, 146000);
+  assert.match(zbody, /Rs 116,000 \+ 20% × Rs 150,000 = Rs 146,000/);
+  assert.match(zbody, /Rs 156,000 − Rs 146,000 = Rs 10,000/);
+});

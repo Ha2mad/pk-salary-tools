@@ -183,5 +183,51 @@ export const articles = [
 <li><a href="https://download1.fbr.gov.pk/Docs/2025841183918948CircularNo01of2025-26IncomeTax.pdf" rel="noopener">FBR Income Tax Circular No. 01 of 2025-26</a> (Tax Year 2026 rates used for the comparison)</li>
 </ul>
 <p class="note">This guide gives estimates for general information only. It is not tax advice. Your actual tax depends on your allowances, credits, other income, any exemptions and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
-<p><small>Published: 22 October 2026</small></p>`}
+<p><small>Published: 22 October 2026</small></p>`},
+{ path: "guides/zakat-tax-deduction-salaried-2026-27/", eyebrow: "Guide", published: "2026-10-26",
+  title: "Is Zakat Deductible from Income Tax in Pakistan? Salaried Guide 2026-27",
+  description: "Zakat deducted by your bank under the Zakat and Ushr Ordinance reduces your taxable income (section 60, ITO 2001). See how much tax it saves on your salary in Tax Year 2027, with a table and a worked example.",
+  body: `<h1>Does Zakat reduce your income tax in 2026-27?</h1>
+<p class="lead">Yes, in one specific case. Zakat paid under the Zakat and Ushr Ordinance, 1980 (for example the Zakat your bank deducts from a savings account on the 1st of Ramazan) is a deductible allowance. It is subtracted from your income before tax is worked out, so it lowers your tax at your top slab rate. This guide shows how much that saves a salaried person in Tax Year 2027 (1 July 2026 – 30 June 2027). Every figure comes from the same code that runs our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a>, using the salaried rates set by the Finance Act 2026.</p>
+<h2>What the law says</h2>
+<p>Section 60(1) of the Income Tax Ordinance 2001 says: "A person shall be entitled to a deductible allowance for the amount of any Zakat paid by the person in a tax year under the Zakat and Ushr Ordinance, 1980". Section 9 then defines taxable income as your total income "reduced (but not below zero) by the total of any deductible allowances". So the Zakat amount comes off your income, not off your tax.</p>
+<p>Two limits are written into section 60:</p>
+<ul>
+<li>It does not apply to Zakat already taken into account under section 40(2), which covers Zakat deducted from certain other income.</li>
+<li>Under section 60(3), any part of the allowance that can't be used in the year (because your income is already down to zero) is not refunded, carried forward or carried back.</li>
+</ul>
+<h2>Which Zakat counts?</h2>
+<p>The section covers Zakat paid "under the Zakat and Ushr Ordinance, 1980". The common case for salaried people is Zakat deducted at source by a bank from a savings or deposit account, which the bank reports on a Zakat deduction certificate. On a plain reading, Zakat you give directly to family, the poor or a charity of your choice is not paid under that Ordinance, so it does not fall under section 60. (A donation to an approved charitable organisation can qualify for a separate tax credit under section 61, which has its own rules and limits.) If you are unsure whether a payment qualifies, ask a tax adviser before claiming it.</p>
+<h2>How much tax Rs 50,000 of Zakat saves, Tax Year 2027</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Monthly salary</th><th scope="col">Yearly tax without the allowance</th><th scope="col">Yearly tax after deducting Rs 50,000 Zakat</th><th scope="col">Tax saved</th><th scope="col">Saving as a share of the Zakat</th></tr></thead><tbody>
+<tr><td>Rs 50,000</td><td>Rs 0</td><td>Rs 0</td><td>Rs 0</td><td>0.0%</td></tr>
+<tr><td>Rs 100,000</td><td>Rs 6,000</td><td>Rs 5,500</td><td>Rs 500</td><td>1.0%</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 72,000</td><td>Rs 66,500</td><td>Rs 5,500</td><td>11.0%</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 156,000</td><td>Rs 146,000</td><td>Rs 10,000</td><td>20.0%</td></tr>
+<tr><td>Rs 250,000</td><td>Rs 276,000</td><td>Rs 266,000</td><td>Rs 10,000</td><td>20.0%</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 416,000</td><td>Rs 403,500</td><td>Rs 12,500</td><td>25.0%</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 1,104,000</td><td>Rs 1,088,000</td><td>Rs 16,000</td><td>32.0%</td></tr>
+</tbody></table></div>
+<p>The table assumes the same salary for all twelve months, that all of it is taxable, no other income, and Rs 50,000 of qualifying Zakat paid in the same tax year. At Rs 50,000 a month (Rs 600,000 a year) no tax is due, so the allowance saves nothing and, under section 60(3), the unused part is lost. Above that, the saving is your top slab rate times the Zakat amount.</p>
+<h2>Worked example: Rs 200,000 a month with Rs 50,000 Zakat deducted</h2>
+<ol>
+<li>Yearly salary: Rs 200,000 × 12 = Rs 2,400,000. That is in the slab from Rs 2,200,001 to Rs 3,200,000, where tax is Rs 116,000 plus 20% of the amount above Rs 2,200,000.</li>
+<li>Tax without the allowance: Rs 116,000 + 20% × Rs 200,000 = Rs 156,000.</li>
+<li>Taxable income after the allowance: Rs 2,400,000 − Rs 50,000 = Rs 2,350,000.</li>
+<li>Tax after the allowance: Rs 116,000 + 20% × Rs 150,000 = Rs 146,000.</li>
+<li>Tax saved: Rs 156,000 − Rs 146,000 = Rs 10,000, which is 20% of the Zakat.</li>
+</ol>
+<h2>How do you claim it?</h2>
+<p>Your employer deducts tax from your salary under section 149 of the Ordinance. That section lists adjustments for tax credits under sections 61 and 63, but it does not mention deductible allowances such as Zakat, so the monthly deduction from your pay will normally ignore it. The allowance is claimed when you file your annual income tax return: enter the Zakat paid in the deductible allowances part of the return and keep the bank's Zakat deduction certificate as evidence. If the tax withheld from your salary over the year turns out to be more than the tax due, the difference can be claimed as a refund through the return. Check the current return form on the FBR's IRIS portal for the exact field.</p>
+<h2>Work out your own figures</h2>
+<p>Enter your yearly salary in our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a> and note the tax. Then enter your yearly salary minus the Zakat deducted. The difference is roughly what the allowance saves you. To work out how much Zakat you owe in the first place, use our <a href="../../tools/zakat-calculator/">Zakat Calculator</a>.</p>
+<p><a class="btn btn-primary" href="../../tools/salary-tax-calculator/">Calculate your salary tax</a></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://download1.fbr.gov.pk/Docs/2026724177725705IncomeTaxOrdinanace2001.pdf" rel="noopener">Income Tax Ordinance, 2001 (FBR, amended up to 30 June 2026)</a>: section 9 (taxable income), section 60 (Zakat), section 61 (charitable donations) and section 149 (tax withheld from salary)</li>
+<li><a href="https://senate.gov.pk/uploads/documents/1782733238_492.pdf" rel="noopener">Finance Act, 2026</a> (Gazette of Pakistan, Extraordinary, 26 June 2026): salaried rate table in clause (2) of Division I, Part I, First Schedule</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026), paragraphs 7 and 8 (salaried rates and withdrawal of the 9% surcharge)</li>
+</ul>
+<p class="note">This guide gives estimates for general information only. It is not tax advice or a religious ruling. Whether a payment qualifies, and your actual tax, depend on your circumstances, other income, credits and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
+<p><small>Published: 26 October 2026</small></p>`}
 ];
