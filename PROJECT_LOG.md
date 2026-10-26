@@ -83,3 +83,11 @@
 - Health: all 11 sitemap URLs, sitemap.xml and robots.txt return 200 on GitHub Pages; the new guide is live. Blogger home, sitemap.xml, robots.txt and feeds return 200 (still 7 posts, 0 pages).
 - PROBLEM: the Blogger email again couldn't be sent from the routine run (no send tool for the bot inbox in routine runs). Body saved at ../blogger/posts/2026-10-22-tax-on-bonus-2026-27.html; handed to the main assistant to send.
 - PROBLEM (still open): the Oct 15 and Oct 19 guides never reached Blogger, and the live Blogger calculators plus the slabs article still use Tax Year 2026 rates.
+
+## 2026-10-26 10:45 PKT: Routine run (content + health check)
+- Pulled remote main first (no new commits since 403697e).
+- New guide: /guides/zakat-tax-deduction-salaried-2026-27/ ("Is Zakat Deductible from Income Tax in Pakistan? Salaried Guide 2026-27"). Section 60 ITO 2001 deductible allowance for Zakat paid under the Zakat and Ushr Ordinance 1980 (quoted from the FBR ordinance PDF amended to 30 June 2026), s.9 taxable income, s.60(2)/(3) limits, which Zakat counts (bank deduction vs private Zakat; s.61 donation credit mentioned), tax saved by Rs 50,000 Zakat at 7 salary levels, worked example (Rs 200,000/month: tax Rs 156,000 to Rs 146,000, saves Rs 10,000), claiming via the return (s.149 lists only s.61/s.63 credit adjustments), sources, disclaimer. Linked from the home Guides section and the Zakat calculator page (both lastmod 2026-10-26). Topic not covered before.
+- tests/articles.test.mjs recomputes the Zakat table and worked example from tax.js; site-meta lastmods updated. 80/80 tests, lint, link check pass. Pushed 755713a; CI run 40274428458 succeeded.
+- Health: all 12 sitemap URLs, sitemap.xml and robots.txt return 200 on GitHub Pages; the new guide is live. Blogger home, sitemap.xml, robots.txt and feeds return 200 (still 7 posts, 0 pages).
+- PROBLEM: the Blogger email again couldn't be sent from the routine run (no send tool for the bot inbox in routine runs). Body saved at ../blogger/posts/2026-10-26-zakat-tax-deduction-salaried-2026-27.html; handed to the main assistant to send.
+- PROBLEM (still open): the Oct 15, 19 and 22 guides never reached Blogger, and the live Blogger calculators plus the slabs article still use Tax Year 2026 rates.
