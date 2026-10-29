@@ -229,5 +229,50 @@ export const articles = [
 <li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026), paragraphs 7 and 8 (salaried rates and withdrawal of the 9% surcharge)</li>
 </ul>
 <p class="note">This guide gives estimates for general information only. It is not tax advice or a religious ruling. Whether a payment qualifies, and your actual tax, depend on your circumstances, other income, credits and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
-<p><small>Published: 26 October 2026</small></p>`}
+<p><small>Published: 26 October 2026</small></p>`},
+{ path: "guides/tax-when-joining-or-changing-job-mid-year-2026-27/", eyebrow: "Guide", published: "2026-10-29",
+  title: "Income Tax When You Join or Change a Job Mid-Year in Pakistan (2026-27)",
+  description: "Started a job or switched employers partway through Tax Year 2027? Your salary tax is worked out on the salary you actually receive from July to June. See the tax for 9, 6 and 3 months of salary, and why a job switch can leave tax unpaid.",
+  body: `<h1>Income tax when you join or change a job mid-year (2026-27)</h1>
+<p class="lead">If you start a job in October, January or April, you don't pay tax as if you'd earned that salary for a full year. Pakistani salary tax is worked out on the salary you actually receive in the tax year, which runs from 1 July 2026 to 30 June 2027 (Tax Year 2027). This guide shows how much less tax that means, what can go wrong when you switch employers, and how to fix it. Every figure comes from the same code that runs our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a>, using the salaried rates set by the Finance Act 2026.</p>
+<h2>What the law says</h2>
+<p>Section 12(1) of the Income Tax Ordinance 2001 says: "Any salary received by an employee in a tax year, other than salary that is exempt from tax under this Ordinance, shall be chargeable to tax in that year under the head 'Salary'". Section 74(1) defines the tax year as "a period of twelve months ending on the 30th day of June". So your taxable salary is what you receive between July and June, and the slab rates apply to that total.</p>
+<p>Your employer deducts tax every month under section 149. It uses your "average rate of tax" on your "estimated income ... chargeable under the head 'Salary' for the tax year", and it must adjust for tax already withheld from you during the year and for any earlier excess deduction or shortfall.</p>
+<h2>Tax for part of the year, Tax Year 2027</h2>
+<div class="table-scroll"><table><thead><tr><th scope="col">Monthly salary</th><th scope="col">Full year (from 1 July)</th><th scope="col">Joined 1 October (9 months)</th><th scope="col">Joined 1 January (6 months)</th><th scope="col">Joined 1 April (3 months)</th></tr></thead><tbody>
+<tr><td>Rs 100,000</td><td>Rs 6,000</td><td>Rs 3,000</td><td>Rs 0</td><td>Rs 0</td></tr>
+<tr><td>Rs 150,000</td><td>Rs 72,000</td><td>Rs 22,500</td><td>Rs 3,000</td><td>Rs 0</td></tr>
+<tr><td>Rs 200,000</td><td>Rs 156,000</td><td>Rs 72,000</td><td>Rs 6,000</td><td>Rs 0</td></tr>
+<tr><td>Rs 300,000</td><td>Rs 416,000</td><td>Rs 216,000</td><td>Rs 72,000</td><td>Rs 3,000</td></tr>
+<tr><td>Rs 500,000</td><td>Rs 1,104,000</td><td>Rs 657,000</td><td>Rs 276,000</td><td>Rs 39,000</td></tr>
+</tbody></table></div>
+<p>Each figure is the total tax for Tax Year 2027, assuming the same monthly salary for every month worked, that all of it is taxable, no other salary or income in the year and no tax credits. Because the first Rs 600,000 of the year is tax-free and the next slab is only 1%, a few months of salary often lands in the lowest slabs. That's why someone who joins in January at Rs 200,000 a month owes Rs 6,000 for the year, not half of Rs 156,000.</p>
+<h2>Worked example: joining on 1 January 2027 at Rs 200,000 a month</h2>
+<ol>
+<li>Salary received in Tax Year 2027: Rs 200,000 × 6 = Rs 1,200,000.</li>
+<li>That is in the slab from Rs 600,001 to Rs 1,200,000, taxed at 1% of the amount above Rs 600,000: 1% × Rs 600,000 = Rs 6,000 for the year.</li>
+<li>Spread over the six months you're paid, that's Rs 6,000 ÷ 6 = Rs 1,000 a month.</li>
+<li>If the payroll instead treated your salary as Rs 2,400,000 for a full year, it would deduct Rs 156,000 ÷ 12 = Rs 13,000 a month, or Rs 78,000 over six months. That is Rs 72,000 more than you owe. You can claim the excess back as a refund (section 170) when you file your return.</li>
+</ol>
+<h2>Changing jobs: why tax can fall short</h2>
+<p>A job switch can go the other way. Each employer may estimate your salary only from what it pays you, so neither applies the higher slab rates that your combined salary reaches. Take someone paid Rs 150,000 a month from July to December by employer A, then Rs 250,000 a month from January to June by employer B:</p>
+<ol>
+<li>Employer A, expecting a full year at Rs 1,800,000, deducts Rs 72,000 ÷ 12 = Rs 6,000 a month. Over six months: Rs 6,000 × 6 = Rs 36,000.</li>
+<li>Employer B, looking only at its own Rs 1,500,000, works out Rs 6,000 + 11% × Rs 300,000 = Rs 39,000 for the year.</li>
+<li>Total withheld: Rs 36,000 + Rs 39,000 = Rs 75,000.</li>
+<li>Actual salary for the year: Rs 900,000 + Rs 1,500,000 = Rs 2,400,000, so the tax due is Rs 116,000 + 20% × Rs 200,000 = Rs 156,000.</li>
+<li>Shortfall: Rs 156,000 − Rs 75,000 = Rs 81,000, which you would have to pay with your return.</li>
+</ol>
+<p>To avoid that, give your new employer the salary and tax figures from your previous job (your old employer's salary and tax deduction certificate), so payroll can estimate the full year's salary and adjust for tax already withheld, as section 149 allows. If you joined mid-year with no earlier job, tell payroll your start date so it doesn't treat your salary as a full year.</p>
+<h2>Work out your own figures</h2>
+<p>Add up the salary you will actually receive from July to June (all employers together) and enter that yearly total in our <a href="../../tools/salary-tax-calculator/">Salary Tax Calculator</a>. The result is your tax for the year. Compare it with the tax shown on your payslips to see whether you're on track, short or due a refund.</p>
+<p><a class="btn btn-primary" href="../../tools/salary-tax-calculator/">Calculate your salary tax</a></p>
+<h2>Sources</h2>
+<ul>
+<li><a href="https://download1.fbr.gov.pk/Docs/2026724177725705IncomeTaxOrdinanace2001.pdf" rel="noopener">Income Tax Ordinance, 2001 (FBR, amended up to 30 June 2026)</a>: section 12(1) (salary received in a tax year), section 74(1) (tax year), section 149 (tax withheld from salary) and section 170 (refunds)</li>
+<li><a href="https://senate.gov.pk/uploads/documents/1782733238_492.pdf" rel="noopener">Finance Act, 2026</a> (Gazette of Pakistan, Extraordinary, 26 June 2026): salaried rate table in clause (2) of Division I, Part I, First Schedule</li>
+<li><a href="https://download1.fbr.gov.pk/Docs/202698139527880CircularNo.2of2026-27.pdf" rel="noopener">FBR Income Tax Circular No. 02 of 2026-27</a> (8 September 2026), paragraphs 7 and 8 (salaried rates and withdrawal of the 9% surcharge)</li>
+</ul>
+<p class="note">This guide gives estimates for general information only. It is not tax advice. How your employer withholds tax, and your actual liability, depend on your allowances, credits, other income and the tax already withheld. Check important figures with the FBR or a qualified tax adviser. See our <a href="../../disclaimer/">disclaimer</a>.</p>
+<p><small>Published: 29 October 2026</small></p>`}
 ];

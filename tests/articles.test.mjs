@@ -105,3 +105,21 @@ test("Zakat worked example: Rs 200,000/month, Rs 50,000 Zakat", () => {
   assert.match(zbody, /Rs 116,000 \+ 20% × Rs 150,000 = Rs 146,000/);
   assert.match(zbody, /Rs 156,000 − Rs 146,000 = Rs 10,000/);
 });
+
+const mbody = articles.find((a) => a.path.startsWith("guides/tax-when-joining")).body;
+const mrows = [...mbody.matchAll(/<tr><td>(Rs [\d,]+)<\/td>(.*?)<\/tr>/g)];
+test("part-year tax table matches calculator logic (Tax Year 2027)", () => {
+  assert.equal(mrows.length, 5);
+  for (const [, m, rest] of mrows) {
+    const monthly = Number(m.replace(/\D/g, ""));
+    assert.deepEqual(cellsOf(rest), [12, 9, 6, 3].map((n) => rs(computeTax(monthly * n, "2027").annualTax)));
+  }
+});
+test("mid-year worked examples (join in January; job switch)", () => {
+  assert.equal(computeTax(1200000, "2027").annualTax, 6000);
+  assert.equal(computeTax(2400000, "2027").annualTax / 12, 13000);
+  assert.match(mbody, /That is Rs 72,000 more than you owe/);
+  assert.equal(computeTax(1800000, "2027").annualTax, 72000);
+  assert.equal(computeTax(1500000, "2027").annualTax, 39000);
+  assert.match(mbody, /Rs 156,000 − Rs 75,000 = Rs 81,000/);
+});
